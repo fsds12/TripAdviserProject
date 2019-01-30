@@ -103,7 +103,7 @@ div#div-category4 {
     margin: 2px;
 }
 
-section {
+section#mainpage-container {
     width: 100%;
     height: 2612px;
     background-color: black;
@@ -111,7 +111,7 @@ section {
     align-content: center;
 }
 
-footer {
+footer#footer-container {
     display: flex;
     font-style: "굴림";
     font-size: 10px;

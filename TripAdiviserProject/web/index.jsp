@@ -3,7 +3,7 @@
 
 <%@ include file="views/common/header.jsp" %>
 
-<section>
+<section id='mainpage-container'>
 	<article id="mainpage">
             <div id="div-mainpage">main page</div>
         </article>

@@ -10,13 +10,13 @@
     <title>Document</title>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
 
 <body>
 	<header>
         <div class="header">
-            <div class="logo"><a href="index.html"><img src="images/Symbol_logo.png" width="80px" height="80px"/></a></div>
+            <div class="logo"><a href="index.html"><img src="<%=request.getContextPath() %>/images/Symbol_logo.png" width="80px" height="80px"/></a></div>
             <!-- <img class="logo" src="images/Symbol_logo.png" width="80px" height="80px"/> -->
             <!-- <div class="logo">logo</div> -->
             <div class="logo-title"><a href="index.html">Travel Agency</a></div>
