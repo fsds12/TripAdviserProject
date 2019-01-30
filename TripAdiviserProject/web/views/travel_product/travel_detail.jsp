@@ -71,7 +71,7 @@
                 </form>
             </div>
             <div id='comment-board'>
-                <table border="1px">
+                <table border="1">
                     <tr>
                         <td>평점</td>
                         <td>작성자</td>
