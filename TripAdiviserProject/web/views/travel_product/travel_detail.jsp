@@ -2,44 +2,6 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
-<style>
-    section#travel-detail-container {
-        width: 100%;
-    }
-    section#travel-detail-container article{
-        width:880px;
-        margin: auto;
-        border:1px solid red;
-    }
-    section#travel-detail-container #travel-album {
-        display: inline-block;
-        width: 240px;
-        height: 216px;
-        text-align: center;
-        
-    }
-    section#travel-detail-container #travel-intro-container {
-        display: inline-block;
-        width: 640px;
-        height: 360px;
-        background-color: darkcyan;
-        position: absolute;
-    }
-    section#travel-detail-container #google-map {
-        width: 240px;
-        height: 144px;
-        background-color: brown;
-    }
-    #travel-intro-container #travel-intro-content {
-        height: 85%
-    }
-    #travel-intro-container #travel-intro-footer {
-        height: 15%;
-    }
-    section#travel-detail-container hr {
-        width:90%; text-align: center; margin-top: 20px; margin-bottom: 20px;
-    }
-</style>
 <script>
     function fn_comment_confirm() {
         var conf = confirm("코멘트 작성을 하시겠습니까?");
