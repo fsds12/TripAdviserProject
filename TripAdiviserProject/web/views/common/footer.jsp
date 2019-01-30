@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 	<footer>
 
-        <div class-"footer">
+        <div class="footer">
             <div>Copyright All served 2019 |
                 KH 3S team |
 
