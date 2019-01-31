@@ -1,8 +1,8 @@
-package tripAdviser.noticeBoard.model.vo;
+package tripAdviser.board.model.vo;
 
 import java.util.Date;
 
-public class NoticeBoard {
+public class Board {
 	private int boardNo;
 	private String title;
 	private String content;
