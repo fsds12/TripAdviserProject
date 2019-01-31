@@ -20,7 +20,7 @@ public class JDBCTemplate {
 	
 	static {
 		prop = new Properties();
-		fileName = JDBCTemplate.class.getResource("/common/sql/driver.properties").getPath();
+		fileName = JDBCTemplate.class.getResource("/sql/common/driver.properties").getPath();
 		try {
 			prop.load(new FileReader(fileName));
 			driver = prop.getProperty("driver");
