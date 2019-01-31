@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="<%=request.getContextPath() %>/js/jquery-3.3.1.min.js"></script>
 
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
