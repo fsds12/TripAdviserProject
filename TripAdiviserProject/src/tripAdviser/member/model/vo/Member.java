@@ -3,16 +3,16 @@ package tripAdviser.member.model.vo;
 import java.util.Date;
 
 public class Member {
-	private String memberId;
-	private String memberPw;
-	private int memberGrade;
-	private String email;
-	private String name;
-	private int postalCode;
-	private String address;
-	private String addressDetail;
-	private String phone;
-	private Date enrollDate;
+	public String memberId;
+	public String memberPw;
+	public int memberGrade;
+	public String email;
+	public String name;
+	public int postalCode;
+	public String address;
+	public String addressDetail;
+	public String phone;
+	public Date date;
 	
-	public Member() {}
+	public Member () {}
 }

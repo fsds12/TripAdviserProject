@@ -1,4 +1,4 @@
-package tripadviser.common.filter;
+package common.filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -8,24 +8,19 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletRequest;
-
-import common.wrapper.EncryptWrapper;
 
 /**
- * Servlet Filter implementation class EncryptFilter
+ * Servlet Filter implementation class CharacterEncordingFilter
  */
-@WebFilter(
-		servletNames = {"LoginServlet", "memberEnrollEndServlet", "changePasswordEndServlet"
-		})
-public class EncryptFilter implements Filter {
+@WebFilter("/*")
+public class CharacterEncordingFilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
-    public EncryptFilter() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor.
+	 */
+	public CharacterEncordingFilter() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see Filter#destroy()
@@ -37,13 +32,16 @@ public class EncryptFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-EncryptWrapper ew=new EncryptWrapper((HttpServletRequest)request);
-		
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		System.out.println("인코딩 필터 적용");
+
 		// pass the request along the filter chain
-		chain.doFilter(ew, response);
+		chain.doFilter(request, response);
 	}
 
 	/**
