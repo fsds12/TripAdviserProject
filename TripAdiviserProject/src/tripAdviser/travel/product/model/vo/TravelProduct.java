@@ -5,6 +5,8 @@ import java.util.Date;
 public class TravelProduct {
 	private int trvNo;
 	private String trvTitle;
+	private String trvProvince;
+	private String trvCity;
 	private String trvAddress;
 	private Date trvDateStart;
 	private Date trvDateEnd;

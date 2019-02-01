@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class Member {
 	private String memberId;
-	private String member_pw;
+	private String memberPw;
+	private int memberGrade;
 	private String email;
 	private String name;
 	private int postalCode;
