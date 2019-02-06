@@ -3,16 +3,18 @@
 
 <%@ include file="/views/common/header.jsp" %>
 	<nav id="notice-menu">
-        <div id="notice-container">
-            <ul>
+        <div id="menu-container">
+            <!-- <ul>
                 <li><a href="">NOTICE</a></li>
                 <li><a href="">Q&A</a></li>
-            </ul>
+            </ul> -->
+            <button>NOTICE</button>
+            <button>Q&A</button>
         </div>
     </nav>    
     <section id="notice-section">
     <div id="notice-container">
-        <table align="center">
+        <table align="center" id="notice-tbl">
             <caption>공지사항</caption>
             <thead>            
             <tr>
@@ -22,11 +24,12 @@
                 <td>작성일</td>
                 <td>조회수</td>
             </tr>
-            </thead>            
+            </thead>
+            <tbody>            
             <tr>
                 <td>1</td>
                 <td>홍길동</td>
-                <td>공지사항</td>
+                <td id="title">공지사항</td>
                 <td>19/01/22</td>
                 <td>1</td>
             </tr>
@@ -57,28 +60,62 @@
                 <td>공지사항</td>
                 <td>19/01/26</td>
                 <td>1</td>
-            </tr>                        
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>관리자</td>
+                <td>공지사항</td>
+                <td>19/01/26</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>관리자</td>
+                <td>공지사항</td>
+                <td>19/01/26</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>관리자</td>
+                <td>공지사항</td>
+                <td>19/01/26</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>관리자</td>
+                <td>공지사항</td>
+                <td>19/01/26</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>관리자</td>
+                <td>공지사항</td>
+                <td>19/01/26</td>
+                <td>1</td>
+            </tr>
+            </tbody>                   
         </table>
         <div id="search-container">
-            <select>
+            <select id="search-category">
                 <option value="제목">제목</option>
-                <option value="글번호">글번호</option>
-                <option value="작성자">작성자</option>
+                <option value="글번호">글번호</option>                
             </select>            
-            <input type="search" name="search" />
-            <input type="button" value="검색"/>
-            
-            <input type="button" id="btn" value="글쓰기"/>   
+            <input type="search" name="search" id="search-text"/>
+            <input type="button" value="검색" id="search-btn"/>            
+            <input type="button" id="write-btn" value="쓰기"/>   
         </div>        
         <div id="paging-container"> 
             <ul>
-                <li><a href="#">[이전]</a></li>
+                <li><a href="#"><<</a></li>
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
-                <li><a href="#">[다음]</a></li>
+                <li><a href="#">>></a></li>
             </ul>
         </div>       
     </div>    
