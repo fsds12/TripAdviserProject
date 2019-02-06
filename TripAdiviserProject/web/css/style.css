@@ -168,25 +168,84 @@ footer#footer-container {
 
 /* 임지안 */
 body{margin: 0;}
-section#notice-section{height: 400px; width: 89.5%; border: 1px solid lightblue; float: right;}
-/* #btn{width: 55px; height: 30px; border: 1px solid grey; background-color: white; border-radius: 5%;}
-#btn:hover{background-color: whitesmoke;} */
-/* .form-control{width: 500px;} */
-nav#notice-menu{height: 400px; width: 10%; border: 1px solid lightseagreen; float: left;}
-nav#notice-menu>ul>li>a{font-size: 20px; font-weight: bolder; text-decoration: none; color: darkcyan;}
-nav#notice-menu>ul>li{list-style-type: none; margin-top: 30px; line-height: 70px; font-family: "Ubuntu"; }
+section#notice-section{height: 520px; width: 89.5%; float: right; }
+nav#notice-menu{height: 510px; width: 10%; float:left;}
+div#menu-container>ul{list-style-type: none; width: 100%;}
 
-div#notice-container {height: 400px;}
-div#notice-container table{text-align: center; margin-top: 8px; height: 250px; width: 500px; border: 1px solid lightcoral; }
-div#notice-container table>thead{font-weight: bold;}
-div#notice-container table>caption{font-size: 25px; text-align: center; font-weight: bold;}
+/* div#menu-container>ul>li>a{
+	text-decoration: none; 
+	color: slategrey; 
+	font-size: 150%; 
+	line-height: 50px;
+	font-weight: bold;
+	display: inline-block;	
+} */
+div#menu-container button{
+	width: 100%; height: 70px;
+	font-size: 25px; border: none;
+	background-color: white; 
+	color: slategrey; font-weight: bold;
+	cursor: pointer;
+	text-align: left; 
+	margin-top: 10px;
+	margin-left: 30px;
+}
 
-div#search-container{float: left; width: 100%; height: 35px; border: 1px solid lightgray; text-align: center;}
+/* 공지사항 게시판 css */
+div#notice-container>table#notice-tbl{
+	border-spacing: 0; 
+	text-align: center; 
+	margin: auto; 
+	height: 400px; width: 80%;}
+	
+div#notice-container>table#notice-tbl thead{
+	font-weight: bold; 
+	
+	line-height: 250%;}
 
-div#paging-container{border: 1px solid lightslategray; width: 100%; height: 35px;}
+div#notice-container>table#notice-tbl caption{
+	font-size: 25px; 
+	text-align: center; 
+	font-weight: bold; 
+	color: slategrey;
+	margin: auto;}
+	
+div#notice-container>table#notice-tbl th,td{border-bottom: 1px solid gainsboro;}
+div#notice-container>table#notice-tbl tbody tr:hover{background-color: whitesmoke;}
+
+div#search-container{margin-top: 5px; width: 100%; height: 35px; text-align: center;}
+div#search-container>input[type="button"]{
+    width: 50px; height: 25px; border: 1px solid gainsboro; background-color: white;
+}
+#search-category{height: 25px; border: 1px solid gainsboro;}
+div#search-container input[type="search"]{
+    border: 0.05em solid gainsboro;
+    width: 250px; height: 25px;
+    border-radius: 0.3em;
+}
+div#paging-container{text-align: center;}
 div#paging-container ul li{list-style-type: none; float: left;}
+div#paging-container ul li a{text-decoration: none; color: blue;}
 
 
+/* 글쓰기 */
+div#write-container>table#write-tbl>caption{font-size: 25px; text-align: center; font-weight: bold; color: slategrey; font-family: "Noto Serif KR"; margin: auto;}
+#noticeForm-tbl{width: 70%; height: 400px;}
+        
+input[type="text"]{
+	width: 300px; height: 30px;
+    border: 0.08em solid lightgray;
+    border-radius: 0.5em;
+}
+textarea{
+    width: 400px; height: 200px;
+    border: 0.08em solid lightgray;
+    border-radius: 0.5em;}
+div#btn-container{width: 100%; height: 30px; text-align: center;}
+div#btn-container>input[type="button"]{
+    width: 50px; height: 30px; border: 1px solid gainsboro; background-color: white;
+    border-radius: 10%;
+}
 /* 이정복 */
 .panel-block {
     display: inline-block;
