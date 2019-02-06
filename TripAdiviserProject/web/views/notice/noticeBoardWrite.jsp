@@ -1,50 +1,58 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%-- <%@ link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet" %> --%>
+<%@ include file="/views/common/header.jsp" %>     
 
-<%@ include file="/views/common/header.jsp" %>
-
-<nav id="notice-menu">
-<div id="notice-container">
-    <ul>
-        <li><a href="">NOTICE</a></li>
-        <li><a href="">Q&A</a></li>
-    </ul>
-</div>
+<body>    
+    <nav id="notice-menu">
+    <div id="menu-container">
+       <button>NOTICE</button>
+       <button>Q&A</button>
+    </div>
 </nav>
-
 <section id="notice-section">
-<div id="notice-container">
-    <form>
-        <table align="center">
-            <caption>공지사항 글쓰기</caption>
+<div id="write-container">    
+        <table align="center" id="write-tbl">
+            <caption>글쓰기</caption>
+            <thead></thead>
             <tr>
-                <td>작성자</td>
-                <td>
-                 <input type="text" name="userId" id="userId"/>
+                <th>작성자</th>
+                <td>                    
+                 <input type="text" name="userId"/>
                 </td>
             </tr>
             <tr>
-                <td>이메일</td>
+                <th>제목</th>
                 <td>
-                 <input type="email" name="email" id="email"/>
+                 <input type="text" name="title" />
+                </td>
+            </tr>             
+            <tr>
+                <th>내용</th>
+                <td>
+                 <textarea></textarea>
                 </td>
             </tr>
             <tr>
-                <td>내용</td>
+                <th>파일업로드</th>
                 <td>
-                 <textarea rows="5"></textarea>
-                </td><br>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <input type="button" value="등록" id="btn"/>
-                    <input type="button" value="취소" id="btn"/>
+                 <input type="file" name="fileUpload"/>
                 </td>
             </tr>
-        </table>    
-    </form>
+            <tr>
+                <th>파일업로드2</th>
+                <td>
+                 <input type="file" name="fileUpload"/>
+                </td>
+            </tr>         
+        </table>  
+    <div id="btn-container">
+        <input type="button" value="등록"/>
+        <input type="button" value="취소"/>
+    </div>
 </div>
 </section>
+    
+</body>
+</html>
 
 <%@ include file="/views/common/footer.jsp" %>
