@@ -7,44 +7,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TripAdvisor</title>
     <script src="<%=request.getContextPath() %>/js/jquery-3.3.1.min.js"></script>
-
+    <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
 
 <body>
-	<header>
+    <header>
         <div class="header">
-            <div class="logo"><a href="index.html"><img src="<%=request.getContextPath() %>/images/Symbol_logo.png" width="80px" height="80px"/></a></div>
-            <!-- <img class="logo" src="images/Symbol_logo.png" width="80px" height="80px"/> -->
-            <!-- <div class="logo">logo</div> -->
-            <div class="logo-title"><a href="index.html">Travel Agency</a></div>
-            <div class="menu">
-                <!-- 자바스크립트 드롭다운 메뉴 -->
-                <ul>
-                    <li>Home</li>
-                    <li>menu1</li>
-                    <li>menu2</li>
-                    <li>menu3</li>
-                    <li>menu4</li>
-                </ul>
-            </div>
-            <div class="login-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" role="navigation">
+                
+                <img src="<%=request.getContextPath() %>/images/Symbol_logo_t.png" width="80px" height="80px" />
+                <span>&nbsp;&nbsp;</span>
+                <a class="navbar-brand" href="<%=request.getContextPath() %>/index.jsp">TripAdvisor</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">hi</span>
+                </button>
 
-                <input type="button" class="login" value="Log In">
-                <input type="button" class="signup" value="Sign up">
-                                
-                    <!-- 로그인시
-                        <input type="button" class="mypage" value="MyPage">
-                    로그아웃
-                    <input type="button" class="logout" value="Logout">
-                    관리자용 - 필요시 hidden
-                    <input type="button" class="Admin" value="Admin"> -->
-                   
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="<%=request.getContextPath() %>/index.jsp">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                휴식거리
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="#">호텔</a>
+                                <a class="dropdown-item" href="#">게스트하우스</a>
+                                <a class="dropdown-item" href="#">템플스테이</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                즐길거리
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="#">볼거리</a>
+                                <!--<div class="dropdown-divider"></div>-->
+                                <a class="dropdown-item" href="#">놀거리</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                먹을거리
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <a class="dropdown-item" href="#">정식</a>
+                                <a class="dropdown-item" href="#">분식</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">길거리음식</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="예)서울" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin : 0 20px 0 0;">Search</button>
+
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><input type="button" class="btn btn-outline-success my-2 my-sm-0" value="Sign up"></li>
+                        <li><input type="button" class="btn btn-outline-success my-2 my-sm-0" value="Log In"></li>
+
+                        <!-- 로그인시
+                    <li><input type="button" class="btn btn-outline-success my-2 my-sm-0" value="MyPage"></li>
+                    <li><input type="button" class="btn btn-outline-success my-2 my-sm-0" value="Admin"></li> 
+                    <li><input type="button" class="btn btn-outline-success my-2 my-sm-0" value="Logout"></li>
+                    -->
+                    </ul>
+                </div>
+            </nav>
 
 
-            </div>
-        </div>
     </header>
-
