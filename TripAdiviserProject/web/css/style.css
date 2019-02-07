@@ -15,27 +15,32 @@
         } */
         section#travel-detail-container #travel-album {
             display: inline-block;
-            width: 240px;
-            height: 226px;
+            width: 440px;
+            height: 276px;
             text-align: center;
+        }
+        #travel-album img {
+        	
         }
         section#travel-detail-container #travel-intro-container {
             margin-left: 25px;
             padding-left: 25px;
+            padding-right: 25px;
             display: inline-block;
-            width: 615px;
-            height: 380px;
+            width: 415px;
+            height: 510px;
             background-color: white;
             border: 0.1px solid lightgray;
+            box-shadow: 0 0 5px 0 lightgray;
             position: absolute;
         }
         section#travel-detail-container #google-map {
-            width: 240px;
-            height: 154px;
-            background-color: lightgray;
+            width: 440px;
+            height: 234px;
+            background-image: url("../images/testMap.png");
         }
         #travel-intro-container #travel-intro-content {
-            height: 80%;
+            height: 85%;
         }
         #travel-intro-container #travel-intro-footer {
             height: 15%;
@@ -58,7 +63,7 @@
             font-weight: bold;
         } 
         #travel-intro-footer button:first-child {
-            margin-right: 290px;
+            margin-right: 105px;
         }
         #travel-intro-footer button {
             margin-right: 10px;

@@ -65,24 +65,25 @@
     <section id='travel-detail-container'>
         <article id='travel-product-container'>
             <div id='travel-album'>
-                <img id="represent" src="<%=request.getContextPath() %>/images/test.png" width="240px" height="144px" style="margin-bottom: 8px;" />
+                <%-- <img id="represent" src="<%=request.getContextPath() %>/images/test.png" width="440px" height="274px" style="margin-bottom: 8px;" /> --%>
+                <img id="represent" src="<%=request.getContextPath() %>/images/test.png" width="440px" height="268px" style="margin-bottom: 8px;" />
                 <!-- <span class="nextPreviusBtn"><</span> -->
-                <img src="<%=request.getContextPath() %>/images/test.png" width="60px" height="48px" />
-                <img src="<%=request.getContextPath() %>/images/test.png" width="60px" height="48px" />
-                <img src="<%=request.getContextPath() %>/images/test.png" width="60px" height="48px" />
+                <%-- <img src="<%=request.getContextPath() %>/images/test.png" width="110px" height="74px" />
+                <img src="<%=request.getContextPath() %>/images/test.png" width="110px" height="74px" />
+                <img src="<%=request.getContextPath() %>/images/test.png" width="110px" height="74px" /> --%>
                 <!-- <span class="nextPreviusBtn">></span> -->
             </div>
             <div id='travel-intro-container'>
                 <div id='travel-intro-content'>
                     <h1 id='travel-title'>여행지: <span>여행지제목</span></h1>
-                    <hr style="margin-bottom: 5px; margin-left:-24px;" />
+                    <!-- <hr style="margin-bottom: 5px; margin-left:-24px;" /> -->
                     <h4>★ <span>4.3</span>평점</h4>
-                    <hr style="margin-top: 5px; margin-left:-24px; height: 1px;"/>
+                    <!-- <hr style="margin-top: 5px; margin-left:-24px; height: 1px;"/> -->
                     <p>일정 : xxxx~xxxx</p>
                     <p>주소 : ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇㅇㅇㅇㅇ</p>
                     <p>소개글 : ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</p>
                 </div>
-                <hr style="margin: 5px 0 5px -24px;"/>
+                <!-- <hr style="margin: 5px 0 5px -24px;"/> -->
                 <div id='travel-intro-footer'>
                     <button onclick="fn_scrap()" class="btn btn-primary" style="background-color: lightgray; border: 0.5px solid darkgray;">스크랩</button>
                     <button onclick="fn_modify()" class="btn btn-default modifyDelBtn">상품수정</button>
@@ -102,7 +103,7 @@
         <article id='travel-comment-container'>
             <div id="input-comment" class="form-group">
                 <form action="/travel/inputComment" method="post" class="form-inline" onsubmit="return fn_comment_confirm();">
-                    평점 : <input type="radio" name="evaluation" id="star1" value="1" />
+				평점 : <input type="radio" name="evaluation" id="star1" value="1" />
                     <label for="star1">★</label>
                     <input type="radio" name="evaluation" id="star2"  value="2" />
                     <label for="star2">★★</label>
@@ -131,6 +132,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <!-- 세션아이디랑 코멘트작성자와 비교해서 맞거나 admin계정이면 hidden삭제 아니면 hidden속성추가해서 넣기  -->
                         <tr>
                             <td>★★★★★</td>
                             <td>test</td>
@@ -160,8 +162,8 @@
                             <td>admin</td>
                             <td>TestComment</td>
                             <td>2019-02-06</td>
-                            <td><a href="javascript:fn_comment_modify(1)" hidden="true"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
-                            <td><a href="javascript:fn_comment_delete(1)" hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                            <td><a href="javascript:fn_comment_modify(1)"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
+                            <td><a href="javascript:fn_comment_delete(1)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
                         </tr>
                         <tr>
                             <td>★</td>
