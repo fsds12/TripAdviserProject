@@ -7,16 +7,18 @@
         }
         section#travel-detail-container article{
             width:880px;
+            
             margin: auto;
         }
-        /* section#travel-detail-container article > div {
+        section#travel-detail-container article:first-child > div {
             border-radius: 5px;
             box-shadow: 0px 0px 5px 0px;
-        } */
+        }
         section#travel-detail-container #travel-album {
             display: inline-block;
             width: 440px;
-            height: 276px;
+            margin-bottom: 8px;
+            height: 268px;
             text-align: center;
         }
         #travel-album img {
@@ -30,8 +32,8 @@
             width: 415px;
             height: 510px;
             background-color: white;
-            border: 0.1px solid lightgray;
-            box-shadow: 0 0 5px 0 lightgray;
+            /* border: 0.1px solid lightgray;
+            box-shadow: 0 0 5px 0 lightgray; */ 
             position: absolute;
         }
         section#travel-detail-container #google-map {
