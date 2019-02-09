@@ -3,45 +3,43 @@
 <%@ include file="/views/common/header.jsp" %>     
 
 <body>    
-    <nav id="notice-menu">
+<nav id="notice-menu">
     <div id="menu-container">
        <button>NOTICE</button>
        <button>Q&A</button>
     </div>
 </nav>
-<section id="notice-section">
-<div id="write-container">    
-        <table align="center" id="write-tbl">
-            <caption>글쓰기</caption>
-            <thead></thead>
-            <tr>
-                <th>작성자</th>
-                <td>                    
-                 <input type="text" name="userId"/>
-                </td>
+<section id="notice-section">	
+	<div class="caption">글쓰기</div>
+    <table align="center" class="write-tbl">    	
+         	<tr>
+            	<th>작성자</th>
+            	<td>                
+               		<input type="text" name="userId" id="id"/>
+            	</td>
             </tr>
             <tr>
                 <th>제목</th>
                 <td>
-                 <input type="text" name="title" />
+                 	<input type="text" name="title" id="title"/>
                 </td>
             </tr>             
             <tr>
                 <th>내용</th>
                 <td>
-                 <textarea></textarea>
+                 	<textarea></textarea>
                 </td>
             </tr>
             <tr>
                 <th>파일업로드</th>
                 <td>
-                 <input type="file" name="fileUpload"/>
+                 	<input type="file" name="fileUpload"/>
                 </td>
             </tr>
             <tr>
                 <th>파일업로드2</th>
                 <td>
-                 <input type="file" name="fileUpload"/>
+                 	<input type="file" name="fileUpload"/>
                 </td>
             </tr>         
         </table>  
@@ -49,7 +47,7 @@
         <input type="button" value="등록"/>
         <input type="button" value="취소"/>
     </div>
-</div>
+
 </section>
     
 </body>

@@ -7,7 +7,7 @@
      </div>
  </nav>    
  <section id="notice-section">
-    <div id="notice-container">
+    
     	<div class="caption">공지사항</div>    	  	
         <table align="center" class="notice-tbl">                    
             <thead>
@@ -16,7 +16,7 @@
             		<input type="button" value="쓰기" class="write-btn"/>
             	</td>
             </tr>                        
-            <tr>
+            <tr class="title">
                 <th>번호</th>
                 <th>작성자</th>
                 <th>제목</th>
@@ -116,6 +116,6 @@
                 <li><a>>></a></li>
             </ul>
         </div>      
-    </div>    
+   
 </section>
 <%@ include file="/views/common/footer.jsp" %>
