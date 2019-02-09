@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="<%=request.getContextPath() %>/js/jquery-3.3.1.min.js"></script>
+    <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.css" >
 
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
