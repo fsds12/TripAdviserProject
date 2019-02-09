@@ -1,28 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/views/common/header.jsp" %>
-	<nav id="notice-menu">
-        <div id="menu-container">
-            <!-- <ul>
-                <li><a href="">NOTICE</a></li>
-                <li><a href="">Q&A</a></li>
-            </ul> -->
-            <button>NOTICE</button>
-            <button>Q&A</button>
-        </div>
-    </nav>    
-    <section id="notice-section">
+<nav id="notice-menu">
+	<div id="menu-container">            
+    	<button>NOTICE</button>
+        <button>Q&A</button>
+     </div>
+ </nav>    
+ <section id="notice-section">
     <div id="notice-container">
-        <table align="center" id="notice-tbl">
-            <caption>공지사항</caption>
-            <thead>            
+    	<div class="caption">공지사항</div>    	  	
+        <table align="center" class="notice-tbl">                    
+            <thead>
             <tr>
-                <td>번호</td>
-                <td>작성자</td>
-                <td>제목</td>
-                <td>작성일</td>
-                <td>조회수</td>
+            	<td colspan="5">
+            		<input type="button" value="쓰기" class="write-btn"/>
+            	</td>
+            </tr>                        
+            <tr>
+                <th>번호</th>
+                <th>작성자</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>조회수</th>
             </tr>
             </thead>
             <tbody>            
@@ -104,20 +103,19 @@
                 <option value="글번호">글번호</option>                
             </select>            
             <input type="search" name="search" id="search-text"/>
-            <input type="button" value="검색" id="search-btn"/>            
-            <input type="button" id="write-btn" value="쓰기"/>   
+            <input type="button" value="검색" id="search-btn"/>           	               
         </div>        
-        <div id="paging-container"> 
-            <ul>
-                <li><a href="#"><<</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">>></a></li>
+         <div id="paging-container"> 
+            <ul class="pagination pagination-sm">
+                <li><a><<</a></li>
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>>></a></li>
             </ul>
-        </div>       
+        </div>      
     </div>    
-    </section>
+</section>
 <%@ include file="/views/common/footer.jsp" %>
