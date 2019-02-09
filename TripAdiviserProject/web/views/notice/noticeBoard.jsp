@@ -1,19 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/views/common/header.jsp" %>
-<nav id="notice-menu">
-	<div id="menu-container">            
-    	<button>NOTICE</button>
-        <button>Q&A</button>
-     </div>
- </nav>    
- <section id="notice-section">
-    
+<%@ include file="/views/notice/nav.jsp" %>
+   
+ <section id="notice-section">    
     	<div class="caption">공지사항</div>    	  	
         <table align="center" class="notice-tbl">                    
             <thead>
             <tr>
             	<td colspan="5">
-            		<input type="button" value="쓰기" class="write-btn"/>
+            		<input type="button" value="쓰기" class="write-btn" onclick="location.href='<%=request.getContextPath()%>/notice/noticeWrite'"/>
             	</td>
             </tr>                        
             <tr class="title">
@@ -28,7 +23,7 @@
             <tr>
                 <td>1</td>
                 <td>홍길동</td>
-                <td id="title">공지사항</td>
+                <td><a href="<%=request.getContextPath()%>/notice/noticeView">공지사항</a></td>
                 <td>19/01/22</td>
                 <td>1</td>
             </tr>

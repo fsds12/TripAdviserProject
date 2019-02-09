@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
+<%@ include file="/views/notice/nav.jsp" %>  
+
 <style>        
 table.noticeView-tbl{	
 	width: 80%; height: 490px;
@@ -21,12 +23,7 @@ input[type="button"]:hover{
 }
 </style>
 <body>
-<nav id="notice-menu">
-    <div id="menu-container">
-       <button>NOTICE</button>
-       <button>Q&A</button>
-    </div>
-</nav>
+
 <section id="notice-section">
 	<div class="caption">공지사항</div>        
 	<table class="noticeView-tbl" align="center">
@@ -42,12 +39,25 @@ input[type="button"]:hover{
 		</tr>
 		<tr>
 			<td colspan="2" height="30px">
-				<input type="button" value="목록"/>               
-            	<input type="button" value="수정"/>
-            	<input type="button" value="삭제"/>
+				<input type="button" value="목록" onclick="fn_return()"/>               
+            	<input type="button" value="수정" onclick="fn_update()"/>
+            	<input type="button" value="삭제" onclick="fn_delete()"/>
 			</td>
 		</tr>
 	</table>  
 </section>
+<script>
+	function fn_return(){
+		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
+	}	
+	function fn_update(){
+		alert("수정?");
+		location.href="<%=request.getContextPath()%>/notice/updateNotice";
+	}
+	function fn_delete(){
+		alert("삭제?");
+		location.href="<%=request.getContextPath()%>/notice/deleteNotice";
+	}
+</script>
 </body>
 <%@ include file="/views/common/footer.jsp" %>
