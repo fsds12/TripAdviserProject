@@ -232,13 +232,13 @@ table.notice-tbl{
 	text-align: center; 
 	margin: auto; 
 	height: 400px; width: 80%;
-	border-bottom: 1px solid gainsboro;
+	border-bottom: 1px solid lightgrey;
 }
 	
 table.notice-tbl tr.title th{	
 	line-height: 250%; 
 	text-align: center;
-	border-top: 1px solid gainsboro;
+	border-top: 1px solid lightgrey;
 }
 
 input[type="button"].write-btn{
@@ -250,7 +250,7 @@ input[type="button"].write-btn{
 }
 	
 table.notice-tbl tr.title th,td{
-	border-bottom: 1px solid gainsboro;
+	border-bottom: 1px solid lightgrey;
 }
 
 table.notice-tbl tbody tr:hover{
@@ -273,24 +273,25 @@ div#paging-container{text-align: center;}
 
 
 /* 글쓰기*/
-/* div#write-container>table#write-tbl>caption{font-size: 25px; text-align: center; font-weight: bold; color: slategrey; font-family: "Noto Serif KR"; margin: auto;} */
-
-/* #noticeForm-tbl{width: 70%; height: 400px;} */
 .write-tbl{
 	width: 70%; height: 400px;
-	margin-top: 20px;	
+	margin-top: 20px;
+	border-spacing: 0;	
 }
 .write-tbl>th, td{
 	border: none;
+}
+.write-tbl th{
+	width: 20%;
 }        
 input[type="text"]{
-	width: 500px; height: 30px;
+	width: 90%; height: 30px;
     border: 0.08em solid lightgray;
     border-radius: 0.5em;
     margin-left: auto;
 }
 textarea{
-    width: 500px; height: 200px;
+    width: 90%; height: 200px;
     border: 0.08em solid lightgray;
     border-radius: 0.5em;}
     
@@ -306,6 +307,8 @@ div#btn-container>input[type="button"]{
     background-color: white;
     border-radius: 10%;
 }
+
+
 
 /* 이정복 */
 .panel-block {
