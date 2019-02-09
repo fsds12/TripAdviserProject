@@ -1,80 +1,110 @@
 /* 주석에 이름으로 각각 해놓은 css 구분 */
 
 /* 손성식 */
-        section#travel-detail-container {
-        margin-top: 10px;
-        width: 100%;
-        }
-        section#travel-detail-container article{
-            width:880px;
-            
-            margin: auto;
-        }
-        section#travel-detail-container article:first-child > div {
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px 0px;
-        }
-        section#travel-detail-container #travel-album {
-            display: inline-block;
-            width: 440px;
-            margin-bottom: 8px;
-            height: 268px;
-            text-align: center;
-        }
-        #travel-album img {
-        	
-        }
-        section#travel-detail-container #travel-intro-container {
-            margin-left: 25px;
-            padding-left: 25px;
-            padding-right: 25px;
-            display: inline-block;
-            width: 415px;
-            height: 510px;
-            background-color: white;
-            /* border: 0.1px solid lightgray;
-            box-shadow: 0 0 5px 0 lightgray; */ 
-            position: absolute;
-        }
-        section#travel-detail-container #google-map {
-            width: 440px;
-            height: 234px;
-            background-image: url("../images/testMap.png");
-        }
-        #travel-intro-container #travel-intro-content {
-            height: 85%;
-        }
-        #travel-intro-container #travel-intro-footer {
-            height: 15%;
-        }
-        section#travel-detail-container > hr {
-            width:90%; text-align: center; margin-top: 20px; margin-bottom: 20px;
-        }
-        #travel-comment-container tfoot {
-            text-align: center;
-        }
-        #travel-album .nextPreviusBtn {
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        #travel-comment-container #input-comment {
-            margin-bottom: 10px;
-        }
-         #travel-product-container #travel-title {
-            /* margin-left: 0px; */
-            font-weight: bold;
-        } 
-        #travel-intro-footer button:first-child {
-            margin-right: 105px;
-        }
-        #travel-intro-footer button {
-            margin-right: 10px;
-        }
-        #comment-board a {
-            text-decoration: none;
-            color: gray;
-        }
+section#travel-detail-container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+section#travel-detail-container article{
+    width:880px;
+    margin: auto;
+}
+section#travel-detail-container article#travel-product-container > div {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px;
+}
+section#travel-detail-container > hr {
+    width:90%; text-align: center; margin-top: 20px; margin-bottom: 20px;
+}
 
+article#travel-product-container div#travel-intro-container {
+    margin-left: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: inline-block;
+    width: 415px;
+    height: 510px;
+    position: absolute;
+}
+article#travel-product-container div#travel-intro-container div{
+	padding-top: 5px;
+}
+article#travel-product-container div#travel-intro-container #travel-title{
+	padding: 0;
+	border-bottom: 0.5px solid;
+	border-bottom-color: silver;
+}
+article#travel-product-container div#travel-intro-container #travel-title h1 {
+    font-weight: bold;
+}
+article#travel-product-container div#travel-intro-container #travel-evul{
+	border-bottom: 0.5px solid;
+	border-bottom-color: silver;
+}
+article#travel-product-container div#travel-intro-container #travel-date{
+	padding-top: 20px;
+}
+article#travel-product-container div#travel-intro-container #travel-address{
+}
+article#travel-product-container div#travel-intro-container #travel-price{
+}
+article#travel-product-container div#travel-intro-container #travel-review{
+	height: 200px;
+} 
+article#travel-product-container div#travel-intro-container #travel-btn{
+}
+article#travel-product-container div#travel-intro-container #travel-btn button:first-child{
+	margin-right: 30%;
+}
+
+article#travel-product-container div#travel-album {
+    display: inline-block;
+    width: 440px;
+    margin-bottom: 8px;
+    height: 268px;
+    text-align: center;
+}
+article#travel-product-container div#travel-album img {
+}
+
+article#travel-product-container div#google-map {
+    width: 440px;
+    height: 234px;
+    background-image: url("../images/testMap.png");
+}
+
+article#travel-comment-container {
+	padding-bottom: 10px;
+}
+
+article#travel-comment-container #input-comment {
+    margin-bottom: 10px;
+}
+article#travel-comment-container div.comment-container {
+	display:flex; width: 880px; height:110px; box-shadow: 0 0 2px 0 lightgray; margin-bottom: 10px; background-color: @gray-lighter;
+}
+article#travel-comment-container div.comment-profile {
+	display:inline-block; width: 80px; height:110px; text-align: center; padding: 1.5px;
+}
+article#travel-comment-container div.comment-profile img {	
+}
+article#travel-comment-container div.comment-writer {
+	display:inline-block; width: 80px; height:110px;
+}
+article#travel-comment-container div.comment-date {
+	display:inline-block; width: 68px; height:110px;
+}
+article#travel-comment-container div.comment-content {
+	display:inline-block;width: 610px; height:110px;
+}
+article#travel-comment-container div.comment-btn-container {
+	display:inline-block; width: 120px; height:110px; text-align: center;
+}
+article#travel-comment-container nav#pageBar {
+	margin: auto;
+	display: inline-block;
+}
 
 
 /* 박순규 */
