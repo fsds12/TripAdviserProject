@@ -67,13 +67,7 @@
 <section id='travel-detail-container'>
     <article id='travel-product-container'>
         <div id='travel-album'>
-            <%-- <img id="represent" src="<%=request.getContextPath() %>/images/test.png" width="440px" height="274px" style="margin-bottom: 8px;" /> --%>
             <img id="represent" src="<%=request.getContextPath() %>/images/test.png" width="440px" height="268px" style="margin-bottom: 8px;" />
-            <!-- <span class="nextPreviusBtn"><</span> -->
-            <%-- <img src="<%=request.getContextPath() %>/images/test.png" width="110px" height="74px" />
-            <img src="<%=request.getContextPath() %>/images/test.png" width="110px" height="74px" />
-            <img src="<%=request.getContextPath() %>/images/test.png" width="110px" height="74px" /> --%>
-            <!-- <span class="nextPreviusBtn">></span> -->
         </div>
         <div id='travel-intro-container'>
         	<div id='travel-title'>
@@ -99,53 +93,6 @@
         		<button onclick="fn_modify()" class="btn btn-default">상품수정</button>
         		<button onclick="fn_delete()" class="btn btn-default">상품삭제</button>
         	</div>
-        	<!-- <table class="table">
-        		<thead>
-        			<tr>
-        				<th><h1 id='travel-title'>여행제목</h1></th>
-        				<th></th>
-        			</tr>
-        			<tr>
-        				<th><h4>★ <span>4.3</span>평점</h4></th>
-        			</tr>
-        		</thead>
-        		<tbody>
-        			<tr>
-        				<td>일정: xxxx~xxxx<br>가격: 000000원(숙박카테고리만)</td>
-        				<td></td>
-        			</tr>
-        			<tr>
-        				<td>주소 : ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇㅇㅇㅇㅇ</td>
-        				<td></td>
-        			</tr>
-        			<tr>
-        				<td>소개글 : ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</td>
-        				<td></td>
-        			</tr>
-        		</tbody>
-        		<tfoot>
-        			<tr>
-        				<td><button onclick="fn_scrap()" class="btn btn-primary" style="background-color: lightgray; border: 0.5px solid darkgray;">스크랩</button></td>
-        				<td><button onclick="fn_modify()" class="btn btn-default">상품수정</button></td>
-        				<td><button onclick="fn_delete()" class="btn btn-default">상품삭제</button></td>
-        			</tr>
-        		</tfoot>
-        	</table> -->
-            <!-- <div id='travel-intro-content'>
-                <h1 id='travel-title'>여행지: <span>여행지제목</span></h1>
-                <hr style="margin-bottom: 5px; margin-left:-24px;" />
-                <h4>★ <span>4.3</span>평점</h4>
-                <hr style="margin-top: 5px; margin-left:-24px; height: 1px;"/>
-                <p>일정 : xxxx~xxxx</p>
-                <p>주소 : ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇㅇㅇㅇㅇ</p>
-                <p>소개글 : ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</p>
-            </div>
-            <hr style="margin: 5px 0 5px -24px;"/>
-            <div id='travel-intro-footer'>
-                <button onclick="fn_scrap()" class="btn btn-primary" style="background-color: lightgray; border: 0.5px solid darkgray;">스크랩</button>
-                <button onclick="fn_modify()" class="btn btn-default modifyDelBtn">상품수정</button>
-                <button onclick="fn_delete()" class="btn btn-default modifyDelBtn">상품삭제</button>
-            </div> -->
         </div>
         <div id="google-map">
             google-map-container
@@ -173,9 +120,6 @@
 			<label for="star5">★★★★★</label>
 			<br>
 			<label class="sr-only" for="comment">Comment</label>
-		<!-- <input type="text" name="comment" id='comment' class="form-control" size="100" placeholder="내용을입력해주세요." /> -->
-			<!-- <textarea class="form-control" cols="100" rows="2" maxlength="100"></textarea>
-			<input type="submit" class="btn btn-default" value="코멘트작성" /> -->
 			<table>
 				<tr>
 					<td rowspan="2">
