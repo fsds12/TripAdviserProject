@@ -2,17 +2,10 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
+<%
+	String id = "admin";	//세션에서 로그인한 사용자의 객체를 불러와서 초기화할예정 임시로 스트링객체선언
+%>
 <script>
-    $(function() {
-    	
-        var logginId = "admin"; <%-- 로그인한사용자 세션에서 확인 <%=logginId %> --%>
-        var writer = "admin";
-        
-        if(logginId == "admin" || writer == logginId) {
-            $('.modifyDelBtn').removeAttr("hidden");
-        }
-    });
-
     function fn_comment_confirm() {
         var comment = $('textarea[name=comment]').val();
         
@@ -100,8 +93,12 @@
         	</div>
         	<div id='travel-btn'>
         		<button onclick="fn_scrap()" class="btn btn-primary">스크랩</button>
-        		<button onclick="fn_modify()" class="btn btn-light">상품수정</button>
-        		<button onclick="fn_delete()" class="btn btn-light">상품삭제</button>
+        		<%if(id.equals("admin") || id.equals("trvWriter")) {//여행상품작성자 본인으로 로그인해있거나 관리자로 로그인했을시 버튼생성%>
+        		<div>
+        			<button onclick="fn_modify()" class="btn btn-light">상품수정</button>
+        			<button onclick="fn_delete()" class="btn btn-light">상품삭제</button>
+        		</div>
+        		<%} %>
         	</div>
         </div>
         <div id="google-map">
@@ -142,6 +139,7 @@
 		</form>
 		<hr />
 		<!-- 세션아이디랑 코멘트작성자와 비교해서 맞거나 admin계정이면 hidden삭제 아니면 hidden속성추가해서 넣기  -->
+		<%if(1>0) {	//이 여행상품에 코멘트가있을시 값들을 로드한다.%>
 		<%for(int i=0; i<4; i++) {%>
 			<div class="comment-container">
 				<div class='comment-profile'>
@@ -168,9 +166,15 @@
 				</div>
 				<div class="comment-btn-container">
 					<p>&nbsp;</p>
+					<%if(id.equals("admin") || id.equals("commentWriter")) {//로그인한사용자가 코멘트작성자 이거나 관리자일시 버튼생성%>
 					<span class="comment-btn">
 						<button class='btn btn-primary' onclick="fn_comment_modify(<%=i %>)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(<%=i %>)">삭제</button>
 					</span>
+					<%} else{ %>
+					<span class="comment-btn">
+						&nbsp;
+					</span>
+					<%} %>
 				</div>
 			</div>
 		<%} %>
@@ -184,24 +188,33 @@
 			</div>
 			<div class="comment-content">
 				<p>★</p>
-				<p> </p>
+				<p>코멘트 틀</p>
 			</div>
 			<div class="comment-btn-container">
 				<p>&nbsp;</p>
-				<span class="comment-btn">
-					<button class='btn btn-primary' onclick="fn_comment_modify(4)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(4)">삭제</button>
-				</span>
+				<%if(id.equals("admin") || id.equals("commentWriter")) {%>
+					<span class="comment-btn">
+						<button class='btn btn-primary' onclick="fn_comment_modify(5)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(5)">삭제</button>
+					</span>
+					<%} else{ %>
+					<span class="comment-btn">
+						&nbsp;
+					</span>
+				<%} %>
 			</div>
 		</div>
 		<nav id="pageBar">
-			<ul class="pagination">
+			<ul class="pagination justify-content-center">
 				<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
 				<li class="page-item"><a class="page-link" href="#">1</a></li>
 				<li class="page-item"><a class="page-link" href="#">2</a></li>
 				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
 				<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
 			</ul> 
 		</nav>
+		<%} %>
     </article>
 </section>
 
