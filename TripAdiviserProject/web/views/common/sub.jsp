@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ include file="views/common/header.jsp"%>
+<%@ include file="/views/common/header.jsp"%>
 
-<section id='mainpage-container'>
+<section id='policy-container'>
 
-	<a href="#privacy"><h3>개인정보처리방침</h3></a><br>
+	<a id="privacy"><h3>개인정보처리방침</h3></a><br>
 	<hr>
 	1. 수집하는 개인정보 항목<br>
 	본 여행안내서비스는 회원가입, 서비스 이용 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
@@ -135,7 +135,7 @@
 	<br>
 	<br>
 	<br>
-	<a href="#policy"><h3>책임의 한계와 법적고지</h3></a><br>
+	<a id="policy"><h3>책임의 한계와 법적고지</h3></a><br>
 	<hr>
 	1. 목적<br>
 	본 여행안내서비스(이하 '회사'라 칭함)가 제공하는 서비스를 통해 제공되는 정보(서비스로부터 링크로 연결된 다른 웹사이트의 텍스트, 이미지, 기타형태의 모든 정보를 포함)에 대해 다음과 같은 내용으로 그 법적인 책임과 한계를 고지합니다.
@@ -161,7 +161,7 @@
 	본 책임의 한계와 법적고지사항에서 다루고 있는 세부사항들은 관계당사자들간의 총체적인 합의사항이며, 회사의 개별서비스에서 정하고 있는 별도의 약관, 고지사항 등과 상충되는 경우에는 별도의 약관 또는 고지사항을 우선 적용합니다.
 	<br>
 	<br>
-	<a href="#teenager"><h3>청소년 보호 정책</h3></a><br>
+	<a id="teenager"><h3>청소년 보호 정책</h3></a><br>
 	<hr>
 	본 여행안내서비스는 모든 연령대가 자유롭게 이용할 수 있는 공간으로써 유해 정보로부터 청소년을 보호하고 청소년의 안전한 인터넷 사용을 돕기 위해 아래와 같이 정보통신망 이용촉진 및 정보보호 등에 관한 법률에서 정한 청소년 보호정책을 시행하고 있습니다.
 	<br>
@@ -208,4 +208,4 @@
 	<br>
 </section>
 
-<%@ include file="views/common/footer.jsp"%>
+<%@ include file="/views/common/footer.jsp"%>
