@@ -81,10 +81,10 @@
         </div>
         <div id='travel-intro-container'>
         	<div id='travel-title'>
-        		<h1>여행제목</h1><div style="display: inline-block; margin-left: 150px;"><sub>조회수: 22532</sub></div>
+        		<h1>여행제목</h1><div style="display: inline-block; margin-left: 120px;"><sub>조회수: 22532</sub></div>
         	</div>
         	<div id='travel-evul'>
-        		<h4>★ <span>4.3</span>평점</h4>
+        		<h5>★ <span>4.3</span>평점</h5>
         	</div>
         	<div id='travel-date'>
         		<p>06.23 ~ 09.01</p>
@@ -100,8 +100,8 @@
         	</div>
         	<div id='travel-btn'>
         		<button onclick="fn_scrap()" class="btn btn-primary">스크랩</button>
-        		<button onclick="fn_modify()" class="btn btn-default">상품수정</button>
-        		<button onclick="fn_delete()" class="btn btn-default">상품삭제</button>
+        		<button onclick="fn_modify()" class="btn btn-light">상품수정</button>
+        		<button onclick="fn_delete()" class="btn btn-light">상품삭제</button>
         	</div>
         </div>
         <div id="google-map">
@@ -118,29 +118,27 @@
     
     <article id='travel-comment-container'>
     	<form action="<%=request.getContextPath() %>/travel/inputComment" method="post" class="form-inline" onsubmit="return fn_comment_confirm()">
-			평점 : <input type="radio" name="evaluation" id="star1" value="1" />
-			<label for="star1">★</label>
+			평점 :&nbsp;<input type="radio" name="evaluation" id="star1" value="1" />
+			<label for="star1">★</label>&nbsp;
 			<input type="radio" name="evaluation" id="star2"  value="2" />
-			<label for="star2">★★</label>
+			<label for="star2">★★</label>&nbsp;
 			<input type="radio" name="evaluation" id="star3" value="3" />
-			<label for="star3">★★★</label>
+			<label for="star3">★★★</label>&nbsp;
 			<input type="radio" name="evaluation" id="star4" value="4" />
-			<label for="star4">★★★★</label>
+			<label for="star4">★★★★</label>&nbsp;
 			<input type="radio" name="evaluation" id="star5" value="5" checked /> 
 			<label for="star5">★★★★★</label>
 			<br>
 			<label class="sr-only" for="comment">Comment</label>
-			<table>
-				<tr>
-					<td rowspan="2">
-						<textarea name="comment" class="form-control" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
-					</td>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td><input type="submit" class="btn btn-default" value="코멘트작성" /></td>
-				</tr>
-			</table>
+			<div id='travel-comment-input-container' style="display: flex;">
+				<div style="display:inline-block;">
+					<textarea name="comment" class="form-control" style="max-width: 657px;" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
+				</div>
+				<div style="display: inline-block;">
+					<div style="display: block;">&nbsp;</div>
+					<div style="display:inline-block;"><input type="submit" class="btn btn-light" value="코멘트작성" /></div>
+				</div>
+			</div>
 		</form>
 		<hr />
 		<!-- 세션아이디랑 코멘트작성자와 비교해서 맞거나 admin계정이면 hidden삭제 아니면 hidden속성추가해서 넣기  -->
@@ -164,14 +162,14 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<td><input type="submit" class="btn btn-default" value="코멘트수정" /></td>
+							<td><input type="submit" class="btn btn-light" value="코멘트수정" /></td>
 						</tr>
 					</table>
 				</div>
 				<div class="comment-btn-container">
 					<p>&nbsp;</p>
 					<span class="comment-btn">
-						<button class='btn btn-primary' onclick="fn_comment_modify(<%=i %>)">수정</button> <button class='btn btn-default' onclick="fn_comment_delete(<%=i %>)">삭제</button>
+						<button class='btn btn-primary' onclick="fn_comment_modify(<%=i %>)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(<%=i %>)">삭제</button>
 					</span>
 				</div>
 			</div>
@@ -191,29 +189,18 @@
 			<div class="comment-btn-container">
 				<p>&nbsp;</p>
 				<span class="comment-btn">
-					<button class='btn btn-primary' onclick="fn_comment_modify(4)">수정</button> <button class='btn btn-default' onclick="fn_comment_delete(4)">삭제</button>
+					<button class='btn btn-primary' onclick="fn_comment_modify(4)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(4)">삭제</button>
 				</span>
 			</div>
 		</div>
 		<nav id="pageBar">
-			<ul class="pagination pagination-sm justify-content-center" style="margin-top: 5px; margin-bottom: 0px;">
-				<!-- <li>
-					<a aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li> -->
-				<li class="disabled"><span aria-hidden="true">&laquo;</span></li>
-				<li class="active"><a>1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li>
-					<a href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				</li>
-			</ul>
+			<ul class="pagination">
+				<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+			</ul> 
 		</nav>
     </article>
 </section>

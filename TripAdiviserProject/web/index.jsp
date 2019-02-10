@@ -1,32 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
-<%@ include file="views/common/header.jsp" %>
-
+<%@ include file="views/common/header.jsp"%>
+<link rel="stylesheet" href="css/vegas.min.css">
+<script src="<%=request.getContextPath()%>/js/jquery-3.3.1.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/css/bootstrap.min.css">
+<script src="css/vegas.min.js"></script>
+<script>
+	$(function() {
+		$("#div-mainpage").vegas(
+				{
+					slides : [ {
+						src : 'images/introPoster.png',
+						video : {
+							src : [ 'images/IntroVideo_long.webm',
+									'images/IntroVideo_long.ogv' ],
+							loop : true,
+							mute : true
+						}
+					} ]
+				});
+	});
+</script>
 <section id='mainpage-container'>
-	<article id="mainpage">
-            <div id="div-mainpage">main page</div>
-        </article>
 
-        <article id="toprank">
-            <div id="div-top-rank">toprank</div>
-        </article>
+	<div class="box-padding-big white-bg" id="div-mainpage">
 
-        <article id="category1">
-            <div id="div-category1">category1</div>
-        </article>
+		<style>
+#title_font {
+	color: white;
+	text-align: center;
+}
 
-        <article id="category2">
-            <div id="div-category2">category2</div>
-        </article>
+.lg_text {
+	padding-top: 200px;
+	font-weight: bold;
+	font-size: 80px;
+}
 
-        <article id="category3">
-            <div id="div-category3">category3</div>
-        </article>
+.sm_text {
+	margin: 5px auto;
+	font-size: 25px;
+}
+</style>
+		<div class="lg_text" id="title_font">떠나 볼까요?</div>
+		<div class="sm_text" id="title_font">Where do you want to go?</div>
 
-        <article id="category4">
-            <div id="div-category4">category5</div>
-        </article>
+
+	</div>
+	<div class="box-padding-big light-bg" id="div-top-rank">toprank</div>
+	<div class="box-padding-big white-bg" id="div-category1">category1</div>
+	<div class="box-padding-big light-bg" id="div-category2">category2</div>
+	<div class="box-padding-big white-bg" id="div-category3">category3</div>
+	<div class="box-padding-big light-bg" id="div-category4">category4</div>
+
 </section>
 
-<%@ include file="views/common/footer.jsp" %>
+<%@ include file="views/common/footer.jsp"%>
