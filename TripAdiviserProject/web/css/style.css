@@ -91,15 +91,15 @@ div.menu {
 	justify-content: left;
 }
 
-ul {
-	display: inline-flex;
-	list-style-type: none;
-	border-style: 1px solid black;
+header div.header ul {
+   display: inline-flex;
+   list-style-type: none;
+   border-style: 1px solid black;
 }
 
-li {
-	display: inline;
-	margin: 5px;
+header div.header li {
+   display: inline;
+   margin: 5px;
 }
 
 div.login-container {
