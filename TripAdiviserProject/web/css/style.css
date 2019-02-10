@@ -36,6 +36,7 @@ article#travel-product-container div#travel-intro-container #travel-title{
 	border-bottom-color: silver;
 }
 article#travel-product-container div#travel-intro-container #travel-title h1 {
+	display:inline-block;
     font-weight: bold;
 }
 article#travel-product-container div#travel-intro-container #travel-evul{

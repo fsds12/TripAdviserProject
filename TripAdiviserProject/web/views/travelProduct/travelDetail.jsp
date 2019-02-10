@@ -53,7 +53,12 @@
     }
 
     function fn_comment_modify(commentNo) {
-        console.log(commentNo);
+        var selNo = commentNo + 1;
+        console.log(selNo);
+        //$("#travel-comment-container .comment-container:nth-child(" + selNo + ") .comment-content p:nth-child(2)").attr("hidden = 'hidden'");
+        //$("#travel-comment-container .comment-container:nth-child(" + selNo + ") .comment-content table").removeAttr("hidden");
+        $("#travel-comment-container .comment-container .comment-content p").attr("hidden");
+        $("#travel-comment-container .comment-container:nth-child(4) .comment-content table").removeAttr("hidden");
     }
 
     function fn_comment_delete(commentNo) {
@@ -64,6 +69,11 @@
         }
     }
 </script>
+<style>
+	#travel-comment-container .comment-container:nth-child() {
+	
+}
+</style>
 <section id='travel-detail-container'>
     <article id='travel-product-container'>
         <div id='travel-album'>
@@ -71,7 +81,7 @@
         </div>
         <div id='travel-intro-container'>
         	<div id='travel-title'>
-        		<h1>여행제목</h1>
+        		<h1>여행제목</h1><div style="display: inline-block; margin-left: 150px;"><sub>조회수: 22532</sub></div>
         	</div>
         	<div id='travel-evul'>
         		<h4>★ <span>4.3</span>평점</h4>
@@ -123,7 +133,7 @@
 			<table>
 				<tr>
 					<td rowspan="2">
-						<textarea name="comment" class="form-control" cols="100" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
+						<textarea name="comment" class="form-control" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
 					</td>
 					<td>&nbsp;</td>
 				</tr>
@@ -146,11 +156,22 @@
 				<div class="comment-content">
 					<p>★</p>
 					<p>	테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트</p>
+					<table hidden>
+						<tr>
+							<td rowspan="2">
+								<textarea name="comment" class="form-control" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td><input type="submit" class="btn btn-default" value="코멘트수정" /></td>
+						</tr>
+					</table>
 				</div>
 				<div class="comment-btn-container">
 					<p>&nbsp;</p>
 					<span class="comment-btn">
-						<button class='btn btn-primary'>수정</button> <button class='btn btn-default'>삭제</button>
+						<button class='btn btn-primary' onclick="fn_comment_modify(<%=i %>)">수정</button> <button class='btn btn-default' onclick="fn_comment_delete(<%=i %>)">삭제</button>
 					</span>
 				</div>
 			</div>
@@ -170,7 +191,7 @@
 			<div class="comment-btn-container">
 				<p>&nbsp;</p>
 				<span class="comment-btn">
-					<button class='btn btn-primary'>수정</button> <button class='btn btn-default'>삭제</button>
+					<button class='btn btn-primary' onclick="fn_comment_modify(4)">수정</button> <button class='btn btn-default' onclick="fn_comment_delete(4)">삭제</button>
 				</span>
 			</div>
 		</div>
