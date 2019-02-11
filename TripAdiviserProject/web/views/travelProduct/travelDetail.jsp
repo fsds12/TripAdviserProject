@@ -129,7 +129,7 @@
 			<label class="sr-only" for="comment">Comment</label>
 			<div id='travel-comment-input-container' style="display: flex;">
 				<div style="display:inline-block;">
-					<textarea name="comment" class="form-control" style="max-width: 657px;" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
+					<textarea name="comment" class="form-control" style="max-width: 657px; height: 100%; margin: 0;" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
 				</div>
 				<div style="display: inline-block;">
 					<div style="display: block;">&nbsp;</div>
@@ -167,9 +167,9 @@
 				<div class="comment-btn-container">
 					<p>&nbsp;</p>
 					<%if(id.equals("admin") || id.equals("commentWriter")) {//로그인한사용자가 코멘트작성자 이거나 관리자일시 버튼생성%>
-					<span class="comment-btn">
+					<div class="comment-btn">
 						<button class='btn btn-primary' onclick="fn_comment_modify(<%=i %>)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(<%=i %>)">삭제</button>
-					</span>
+					</div>
 					<%} else{ %>
 					<span class="comment-btn">
 						&nbsp;
