@@ -342,6 +342,33 @@ div#btn-container>input[type="button"]{
     border-radius: 10%;
 }
 
+table.noticeView-tbl{	
+	width: 80%; height: 490px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+table.noticeView-tbl td{
+	border-bottom: 1px solid lightgrey;	
+}
+td#btn-td{
+	border: none;
+}       
+td#btn-td input[type="button"]{            
+	border: 1px solid gainsboro;
+    background-color: white;
+    width: 50px; height: 30px;
+    cursor: pointer;
+    margin: auto;
+    float: right;                  
+}
+td#btn-td input[type="button"]:hover{
+    background-color: whitesmoke;
+}
+
+td#writer-td, td#date-td{
+	font-size: 13px;
+	
+}
 
 /* 이정복 */
 .panel-block {
