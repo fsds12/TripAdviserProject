@@ -10,10 +10,9 @@ section#noticeView-section div#noticeView-section{
 }
 section#noticeView-section div#comment-container{
 	/* border: 1px solid lightgreen; */
-	width:89.5%; height: 400px;
-	display: inline-block;
+	width:89.5%; height: 400px;	
 	float: right;
-	text-align: center;
+	text-align: center; 
 	display: none;
 }
 section#noticeView-section div#comment-container textarea{
@@ -31,8 +30,9 @@ section#noticeView-section div#comment-container input[type="button"]{
 	cursor: pointer;	
 }
 section#noticeView-section div#comment-container div#comment-box{
-	border: 1px solid lightblue;
-	width: 80%;
+	margin-top: 10px;
+	width: 80%; height: 100px;
+	
 }
 </style>
 <section id="noticeView-section">

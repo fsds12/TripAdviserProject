@@ -3,7 +3,9 @@
 <%@ include file="/views/notice/nav.jsp" %>
    
  <section id="notice-section">    
-    	<div class="caption">공지사항</div>    	  	
+    	<div class="caption">
+			<img src="<%=request.getContextPath()%>/views/images/notice.png"/>
+		</div>    	  	
         <table align="center" class="notice-tbl">                    
             <thead>
             <tr>
