@@ -347,7 +347,7 @@ div#btn-container>input[type="button"]{
 }
 
 table.noticeView-tbl{	
-	width: 80%; height: 490px;
+	width: 80%; height: 450px;
 	border-spacing: 0;
 	border-collapse: collapse;
 	margin-top: 10px;
@@ -374,7 +374,7 @@ td#btn-td input[type="button"]:hover{
 
 td#writer-td, td#date-td{
 	font-size: 13px;
-	
+	color: grey;
 }
 
 

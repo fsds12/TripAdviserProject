@@ -2,49 +2,57 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
+<%@ include file="/views/notice/nav.jsp" %>  
+    
 
-<nav id="notice-menu">
-<div id="notice-container">
-    <ul>
-        <li><a href="">NOTICE</a></li>
-        <li><a href="">Q&A</a></li>
-    </ul>
-</div>
-</nav>
-
-<section id="notice-section">
-<div id="notice-container">
-    <form>
-        <table align="center">
-            <caption>공지사항 글쓰기</caption>
+<section id="notice-section">	
+	<div class="caption">글쓰기</div>
+    <table align="center" class="write-tbl">    	
+         	<tr>
+            	<th>작성자</th>
+            	<td>                
+               		<input type="text" name="userId" value=" user01" readonly/>
+            	</td>
+            </tr>
             <tr>
-                <td>작성자</td>
+                <th>제목</th>
                 <td>
-                 <input type="text" name="userId" id="userId"/>
+                 	<input type="text" name="title" id="title"/>
+                </td>
+            </tr>             
+            <tr>
+                <th>내용</th>
+                <td>
+                 	<textarea></textarea>
                 </td>
             </tr>
             <tr>
-                <td>이메일</td>
+                <th>파일업로드</th>
                 <td>
-                 <input type="email" name="email" id="email"/>
+                 	<input type="file" name="up_file"/>
                 </td>
             </tr>
             <tr>
-                <td>내용</td>
+                <th>파일업로드2</th>
                 <td>
-                 <textarea rows="5"></textarea>
-                </td><br>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <input type="button" value="등록" id="btn"/>
-                    <input type="button" value="취소" id="btn"/>
+                 	<input type="file" name="up_file"/>
                 </td>
-            </tr>
-        </table>    
-    </form>
-</div>
+            </tr>         
+        </table>  
+    <div id="btn-container">
+        <input type="button" value="등록" onclick="fn_submit()"/>
+        <input type="button" value="취소" onclick="fn_cancle()"/>
+    </div>
 </section>
+<script>
+	function fn_submit(){
+		alert("등록하시겠습니까?");
+		location.href="<%=request.getContextPath()%>/notice/insertNotice";
+	}
+	function fn_cancle(){
+		alert("취소하시겠습니까?");
+		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
+	}
+</script> 
 
 <%@ include file="/views/common/footer.jsp" %>

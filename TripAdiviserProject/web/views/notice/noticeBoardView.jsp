@@ -2,7 +2,7 @@
 
 <%@ include file="/views/common/header.jsp" %>
 <%@ include file="/views/notice/nav.jsp" %>
-<body>
+
 
 <section id="notice-section">
 	<div class="caption">공지사항</div>        
@@ -51,5 +51,5 @@
 		location.href="<%=request.getContextPath()%>/notice/deleteNotice";
 	}
 </script>
-</body>
+
 <%@ include file="/views/common/footer.jsp" %>

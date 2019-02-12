@@ -101,14 +101,14 @@
             <input type="button" value="검색" id="search-btn"/>           	               
         </div>        
          <div id="paging-container"> 
-            <ul class="pagination pagination-sm">
-                <li><a><<</a></li>
-                <li><a>1</a></li>
-                <li><a>2</a></li>
-                <li><a>3</a></li>
-                <li><a>4</a></li>
-                <li><a>5</a></li>
-                <li><a>>></a></li>
+            <ul class="pagination">
+                <li><a href="#"><<</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">>></a></li>
             </ul>             
    		</div>
 </section>

@@ -2,13 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
-<body>
-<nav id="notice-menu">
-    <div id="menu-container">
-       <button>NOTICE</button>
-       <button>Q&A</button>
-    </div>
-</nav>
+<%@ include file="/views/notice/nav.jsp" %>
 
 <section id="notice-section">	
 	<div class="caption">글수정</div>
@@ -45,10 +39,19 @@
             </tr>         
         </table>  
     <div id="btn-container">
-        <input type="button" value="등록"/>
-        <input type="button" value="취소"/>
+        <input type="button" value="등록" onclick="fn_submit()"/>
+        <input type="button" value="취소" onclick="fn_cancle()"/>
     </div>
-
 </section>
-</body>
+
+<script>
+	function fn_submit(){
+		alert("등록하시겠습니까?");
+	}
+	function fn_cancle(){
+		location.href="<%=request.getContextPath()%>/views/notice/noticeBorad.jsp";
+	}
+</script>
+
+
 <%@ include file="/views/common/footer.jsp" %>

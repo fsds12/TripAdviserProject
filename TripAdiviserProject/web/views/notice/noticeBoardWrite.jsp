@@ -2,7 +2,7 @@
 <%-- <%@ link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet" %> --%>
 <%@ include file="/views/common/header.jsp" %>     
 <%@ include file="/views/notice/nav.jsp" %>  
-<body>    
+    
 
 <section id="notice-section">	
 	<div class="caption">글쓰기</div>
@@ -53,7 +53,6 @@
 		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
 	}
 </script>    
-</body>
-</html>
+
 
 <%@ include file="/views/common/footer.jsp" %>
