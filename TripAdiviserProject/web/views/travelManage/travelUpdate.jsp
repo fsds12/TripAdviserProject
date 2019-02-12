@@ -3,35 +3,7 @@
 
 <%@ include file="/views/common/header.jsp" %>
 
-<style>
-	.inputArea {
-	 	margin:0px 0px 0px 5px;
-	}
-	select { 
-		width:190px; 
-	}
-	label { 
-		display:inline-block; width:70px; padding:5px; 
-	}
-	label[for='gdsDes'] { 
-		display:block; 
-	}
-	input { 
-		width:190px; 
-	}
-	textarea#gdsDes { 
-		width:400px; height:180px; 
-	}
-	#update_Btn{
-		position: relative;
-		left:140px;
-	}
-	#cancle_Btn{
-		position: relative;
-		left:150px;
-	}
-	
-</style>
+
 
 
 <section>

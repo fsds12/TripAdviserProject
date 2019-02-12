@@ -3,56 +3,26 @@
 
 <%@ include file="/views/common/header.jsp" %>
 
-<style>
-	.inputArea {
-	 	margin:0px 0px 0px 5px;
-	}
-	select { 
-		width:190px; 
-	}
-	label { 
-		display:inline-block; width:70px; padding:5px; 
-	}
-	label[for='gdsDes'] { 
-		display:block; 
-	}
-	input { 
-		width:190px; 
-	}
-	textarea#gdsDes { 
-		width:400px; height:180px; 
-	}
-	#register_Btn{
-		position: relative;
-		left:140px;
-	}
-	#cancle_Btn{
-		position: relative;
-		left:150px;
-	}
-	
-</style>
+
 
 
 <section>
 <form action="" method="post">
+
 	<div class="inputArea">
-		<label>분류선택</label> <select class="category1">
-			<option value="카테고리">카테고리</option>
-			<option value="상품제목">상품제목</option>
-			<option value="기타">기타</option>
-		</select> 
-	</div>
-	<div class="inputArea">
-		<label for="gdsName">상품명</label> <input type="text" id="gdsName"
+		<label for="gdsName">여행제목</label> <input type="text" id="gdsName"
 			name="gdsName" />
 	</div>
 	<div class="inputArea">
-		<label for="gdsPrice">상품가격</label> <input type="text" id="gdsPrice"
+		<label for="gdsPrice">카테고리명</label> <input type="text" id="gdsPrice"
 			name="gdsPrice" />
 	</div>
 	<div class="inputArea">
-		<label for="gdsStock">상품수량</label> <input type="text" id="gdsStock"
+		<label for="gdsStock">작성일자</label> <input type="text" id="gdsStock"
+			name="gdsStock" />
+	</div>
+	<div class="inputArea">
+		<label for="gdsStock">작성자</label> <input type="text" id="gdsStock"
 			name="gdsStock" />
 	</div>
 	<div class="inputArea">
