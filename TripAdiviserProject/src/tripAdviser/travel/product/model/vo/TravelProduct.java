@@ -6,6 +6,7 @@ public class TravelProduct {
 	private int trvNo;
 	private String trvTitle;
 	private double evul;	//여행상품 평점
+	private String trvRepresentPic;	//여행상품URL
 	private String trvProvince;
 	private String trvCity;
 	private String trvAddress;

@@ -5,6 +5,7 @@
 <%
 	String id = "admin";	//세션에서 로그인한 사용자의 객체를 불러와서 초기화할예정 임시로 스트링객체선언
 %>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
     function fn_comment_confirm() {
         var comment = $('textarea[name=comment]').val();
@@ -61,6 +62,25 @@
             location.href = "<%=request.getContextPath() %>/travel/commentDelete?commentNo=" + commentNo;
         }
     }
+    
+    function initialize() {
+    	  var LatLng = new google.maps.LatLng(37.560658, 126.985484);
+    	  
+    	  var mapProp = {
+    	    center: LatLng, // 위치
+    	    zoom:15, // 어느정도까지 세세하게 볼 것인지.
+    	    mapTypeId:google.maps.MapTypeId.ROADMAP
+    	  };
+
+    	  var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
+    	  
+    	  var marker = new google.maps.Marker({
+    		position: LatLng,
+    		map: map,
+    	  });
+    	}
+
+    google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <style>
 	#travel-comment-container .comment-container:nth-child() {
