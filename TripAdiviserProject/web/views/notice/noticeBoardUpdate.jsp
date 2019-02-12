@@ -10,7 +10,7 @@
          	<tr>
             	<th>작성자</th>
             	<td>                
-               		<input type="text" name="userId" id="id"/>
+               		<input type="text" name="userId" id="id" value=" admin" required/>
             	</td>
             </tr>
             <tr>

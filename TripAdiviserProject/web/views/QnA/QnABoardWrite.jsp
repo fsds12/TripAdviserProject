@@ -23,17 +23,17 @@
             <tr>
                 <th>내용</th>
                 <td>
-                 	<textarea></textarea>
+                 	<textarea id="content"></textarea>
                 </td>
             </tr>
             <tr>
-                <th>파일업로드</th>
+                <th>파일첨부</th>
                 <td>
                  	<input type="file" name="up_file"/>
                 </td>
             </tr>
             <tr>
-                <th>파일업로드2</th>
+                <th>파일첨부</th>
                 <td>
                  	<input type="file" name="up_file"/>
                 </td>
@@ -53,6 +53,12 @@
 		alert("취소하시겠습니까?");
 		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
 	}
+	
+	$(function(){
+		var text=document.getElementById('content');
+		text.value+="관리와 글쓴사람만 볼 수 있음";
+		
+	})
 </script> 
 
 <%@ include file="/views/common/footer.jsp" %>

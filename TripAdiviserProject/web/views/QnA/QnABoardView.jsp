@@ -3,8 +3,36 @@
 
 <%@ include file="/views/common/header.jsp" %>
 <%@ include file="/views/notice/nav.jsp" %>
-
+<style>
+section#noticeView-section div#noticeView-section{
+	height: 550px; 
+	width: 89.5%; 
+}
+section#noticeView-section div#comment-container{
+	/* border: 1px solid lightgreen; */
+	width:89.5%; height: 400px;
+	display: inline-block;
+	float: right;
+	text-align: center;
+}
+section#noticeView-section div#comment-container textarea{
+	margin-top: 10px;
+	width: 80%; height: 100px;
+	border: 0.05em solid lightgrey;
+	border-radius: 0.5em;
+	
+}
+section#noticeView-section div#comment-container input[type="button"]{
+	width: 50px; height: 30px; 
+	border: 1px solid gainsboro; 
+	background-color: white;	
+	border-radius: 10%;
+	cursor: pointer;
+	
+}
+</style>
 <section id="noticeView-section">
+<div class="noticeView-container">
 	<div class="caption">Q&A</div>        
 	<table class="noticeView-tbl" align="center">
 		<tr height="60px">
@@ -28,10 +56,18 @@
 			<td colspan="2" height="30px" id="btn-td">
 				<input type="button" value="삭제" onclick="fn_delete()"/>
 				<input type="button" value="수정" onclick="fn_update()"/>
-				<input type="button" value="목록" onclick="fn_return()"/>           	
+				<input type="button" value="목록" onclick="fn_return()"/>
+				<input type="button" value="답글" onclick="fn_comment()" id="comment-btn"/>         	
 			</td>
 		</tr>
-	</table>  
+	</table>
+	<div id="comment-container">
+		<textarea></textarea>
+		<input type="button" value="등록"/>
+		<div></div>
+	</div>
+	
+</div>	  
 </section>
 <script>
 	function fn_return(){
@@ -45,5 +81,13 @@
 		alert("삭제하시겠습니까?");
 		location.href="<%=request.getContextPath()%>/QnA/deleteQnA";
 	}
+	function fn_comment(){
+		alert("등록하시겠습니까?");
+	}
+	$(function(){
+	    $('#comment-btn').click(function(){	    	
+	        $('#comment-container').toggle();
+	    });
+	});
 </script>
 <%@ include file="/views/common/footer.jsp" %>

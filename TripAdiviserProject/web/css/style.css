@@ -237,7 +237,7 @@ section#notice-section{
 	height: 550px; 
 	width: 89.5%; 
 	float: right; }
-nav#notice-menu{height: 550px; width: 10%; float:left;}
+nav#notice-menu{height: 600px; width: 10%; float:left;}
 div#menu-container>ul{list-style-type: none; width: 100%;}
 div#menu-container button{
 	width: 100%; height: 70px;
@@ -277,11 +277,16 @@ section#notice-section table.notice-tbl tr.title th{
 
 section#notice-section input[type="button"].write-btn{
 	width: 50px; 
-	height: 25px; 
+	height: 30px; 
 	border: 1px solid gainsboro; 
 	background-color: white;	
 	float: right;
 	border-radius: 10%;
+	cursor: pointer;
+}
+
+section#notice-section input[type="button"].write-btn:hover{
+	background-color: whitesmoke;
 }
 	
 section#notice-section table.notice-tbl tr.title th,td{
@@ -292,17 +297,29 @@ section#notice-section table.notice-tbl tbody tr:hover{
 	background-color: whitesmoke;
 }
 
-section#notice-section div#search-container{margin-top: 5px; width: 100%; height: 35px; text-align: center;}
+section#notice-section div#search-container{
+	margin-top: 5px; 
+	width: 100%; height: 35px; 
+	text-align: center;
+}
+
 section#notice-section div#search-container>input[type="button"]{
-    width: 50px; height: 25px; 
+    width: 50px; height: 28px; 
     border: 1px solid gainsboro; 
     background-color: white;
     border-radius: 10%;
+    cursor: pointer;
 }
-section#notice-section div#search-container search#search-category{height: 25px; border: 1px solid gainsboro;}
+section#notice-section div#search-container>input[type="button"]:hover{
+	background-color: whitesmoke;
+}
+section#notice-section div#search-container search#search-category{
+	height: 30px; 
+	border: 1px solid gainsboro;
+}
 section#notice-section div#search-container input[type="search"]{
     border: 0.05em solid gainsboro;
-    width: 250px; height: 25px;
+    width: 250px; height: 28px;
     border-radius: 0.3em;
 }
 
@@ -324,13 +341,13 @@ section#noticeWrite-section table.write-tbl th{
 }        
 section#noticeWrite-section table input[type="text"]{
 	width: 90%; height: 30px;
-    border: 0.08em solid lightgray;
+    border: 0.03em solid lightgray;
     border-radius: 0.5em;
     margin-left: auto;
 }
 section#noticeWrite-section table textarea{
     width: 90%; height: 200px;
-    border: 0.08em solid lightgray;
+    border: 0.03em solid lightgray;
     border-radius: 0.5em;}
     
 section#noticeWrite-section div#btn-container{
@@ -339,11 +356,16 @@ section#noticeWrite-section div#btn-container{
 	text-align: center;
 	margin-top: 20px;
 }
-section#noticeWrite-section div#btn-container>input[type="button"]{
+section#noticeWrite-section div#btn-container input[type="button"]{
     width: 50px; height: 30px; 
     border: 1px solid gainsboro; 
     background-color: white;
     border-radius: 10%;
+    cursor: pointer;
+}
+
+section#noticeWrite-section div#btn-container input[type="button"]:hover{    
+    background-color: whitesmoke;    
 }
 
 section#noticeView-section table.noticeView-tbl{	
@@ -377,6 +399,9 @@ section#noticeView-section td#writer-td, td#date-td{
 	color: grey;
 }
 
+section#noticeView-section input[type="button"]#comment-btn{
+	
+}
 
 /* 이정복 */
 .panel-block {

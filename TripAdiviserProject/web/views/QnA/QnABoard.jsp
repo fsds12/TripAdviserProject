@@ -57,7 +57,7 @@
                 <td>19/01/26</td>
                 <td>1</td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td>6</td>
                 <td>관리자</td>
                 <td>공지사항</td>
@@ -91,7 +91,7 @@
                 <td>공지사항</td>
                 <td>19/01/26</td>
                 <td>1</td>
-            </tr>
+            </tr> -->
             </tbody>                   
         </table>
         <div id="search-container">
