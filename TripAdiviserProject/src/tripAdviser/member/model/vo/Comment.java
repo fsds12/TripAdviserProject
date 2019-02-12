@@ -3,6 +3,7 @@ package tripAdviser.member.model.vo;
 import java.util.Date;
 
 public class Comment {
+	private int commentNo;
 	private int trvNo;
 	private String memberId;
 	private int trvEvaluation;
