@@ -82,8 +82,8 @@
                                 읽을거리
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">공지사항</a>
-                                <a class="dropdown-item" href="#">Q/A</a>
+                                <a class="dropdown-item" href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp">공지사항</a>
+                                <a class="dropdown-item" href="<%=request.getContextPath()%>/views/QnA/QnABoard.jsp">Q/A</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">사이트소개</a>
                             </div>

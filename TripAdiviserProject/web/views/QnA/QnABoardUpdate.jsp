@@ -9,7 +9,7 @@
          	<tr>
             	<th>작성자</th>
             	<td>                
-               		<input type="text" name="userId" id="id"/>
+               		<input type="text" name="userId" id="id" value=" user01" required/>
             	</td>
             </tr>
             <tr>
