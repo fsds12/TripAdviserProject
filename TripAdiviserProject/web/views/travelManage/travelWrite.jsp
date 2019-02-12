@@ -6,33 +6,45 @@
 
 
 
-<section>
+<section id="sec">
 <form action="" method="post">
 
 	<div class="inputArea">
-		<label for="gdsName">여행제목</label> <input type="text" id="gdsName"
-			name="gdsName" />
+		<label for="trName">여행제목</label> 
+		<input type="text" id="trName" name="trName" />
 	</div>
 	<div class="inputArea">
-		<label for="gdsPrice">카테고리명</label> <input type="text" id="gdsPrice"
-			name="gdsPrice" />
+		<label>카테고리</label> <select class="category1">
+			<option value="대분류">대분류</option>
+			<option value="소분류">소분류</option>
+			<option value="기타">기타</option>
+		</select> 
 	</div>
 	<div class="inputArea">
-		<label for="gdsStock">작성일자</label> <input type="text" id="gdsStock"
-			name="gdsStock" />
+		<label for="trDateBegin">기간시작</label> 
+		<input type="text" id="trDateBegin" name="trDateBegin" />
 	</div>
 	<div class="inputArea">
-		<label for="gdsStock">작성자</label> <input type="text" id="gdsStock"
-			name="gdsStock" />
+		<label for="trDateEnd">기간끝</label> 
+		<input type="text" id="trDateEnd" name="trDateEnd" />
 	</div>
 	<div class="inputArea">
-		<label for="gdsImage">이미지</label> <input type="file" id="gdsImage"
-			name="gdsImage" />
+		<label for="trImage">이미지1</label> 
+		<input type="file" id="trImage" name="trImage" />
 	</div>
-	<div class="inputArea">
-		<label for="gdsDes">상품소개</label>
-		<textarea rows="5" cols="50" id="gdsDes" name="gdsDes"></textarea>
+		<div class="inputArea">
+		<label for="trImage">이미지2</label> 
+		<input type="file" id="trImage" name="trImage" />
 	</div>
+		<div class="inputArea">
+		<label for="trImage">이미지3</label> 
+		<input type="file" id="trImage" name="trImage" />
+	</div>
+		<div class="inputArea">
+		<label for="trImage">이미지4</label> 
+		<input type="file" id="trImage" name="trImage" />
+	</div>
+
 	<div class="inputArea">
 		<button type="submit" id="register_Btn" class="btn btn-primary">등록</button>
 		<button type="submit" id="cancle_Btn" class="btn btn-primary">취소</button>

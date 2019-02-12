@@ -10,7 +10,7 @@
 		<div class="container">
 
 
-			<div>
+			<div id="con-bottom">
 
 
 				<table class="table table-striped" style="margin-bottom: 1px">
@@ -18,11 +18,10 @@
 						<tr>
 							
 							<th>여행제목</th>
-							<th>카테고리명</th>
+							<th>카테고리</th>
 							<th>작성일자</th>
 							<th>작성자</th>
-							<th>수정</th>
-							<th>삭제</th>
+						
 						</tr>
 					</thead>
 					<tbody>
@@ -31,8 +30,7 @@
 							<td>리스트값</td>
 							<td>리스트값</td>
 							<td>리스트값</td>
-							<td><a href="#">수정</a></td>
-							<td><a href="#">삭제</a></td>
+						
 						
 						</tr>
 
@@ -41,8 +39,7 @@
 							<td>리스트값</td>
 							<td>리스트값</td>
 							<td>리스트값</td>
-							<td><a href="#">수정</a></td>
-							<td><a href="#">삭제</a></td>
+							
 							
 						</tr>
 
@@ -51,10 +48,10 @@
 							<td>리스트값</td>
 							<td>리스트값</td>
 							<td>리스트값</td>
-							<td><a href="#">수정</a></td>
-							<td><a href="#">삭제</a></td>
+				
 						
 						</tr>
+						
 					</tbody>
 					<tfoot>
 						<tr>
@@ -62,16 +59,19 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td></td>
+							
 						</tr>
 					</tfoot>
 				</table>
 
 
 			</div>
-
-
+			
+			<div id="btn">
+			<button id="btn-update" onclick="">수정</button>
+			<button id="btn-delete" onclick="">삭제</button>
+			</div>
+			
 			<nav aria-label="Page navigation example" style="text-align: center;">
 				<ul class="pagination">
 					<li class="page-item"><a class="page-link" href="#"

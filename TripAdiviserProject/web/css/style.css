@@ -308,6 +308,7 @@ div#paging-container ul li {
 }
 
 /* 이정복 */
+
 nav ul.pagination {
 	color: white;
 	text-decoration: none;
@@ -356,27 +357,50 @@ section form .inputArea	select {
 section form .inputArea	label { 
 		display:inline-block; width:70px; padding:5px; 
 	}
-section form .inputArea label[for='gdsDes'] { 
-		display:block; 
-	}
+
 section form .inputArea	input { 
 		width:190px; 
 	}
-section form .inputArea	textarea#gdsDes { 
-		width:400px; height:180px; 
-	}
+
 section form .inputArea #register_Btn{
 		position: relative;
 		left:140px;
+		margin: 30px 5px 10px 0px;
 	}
 section form .inputArea #update_Btn{
 		position: relative;
 		left:140px;
+		margin: 30px 5px 10px 0px;
 	}
 section form .inputArea	#cancle_Btn{
 		position: relative;
 		left:150px;
+		margin: 30px 5px 10px 0px;
 	}
+section#sec{
+	margin-top:10px;
+}
+
+section form div.container div#btn #btn-update{
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 37px;
+	background-color: #ED786A;
+	border-radius: 5px;
+	color: white;
+	
+}
+
+section form div.container div#btn #btn-delete{
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 37px;
+	background-color: #ED786A;
+	border-radius: 5px;
+	color: white;
+}
 
 
 
