@@ -261,7 +261,7 @@ div.caption{
 
 
 /* 공지사항 게시판 css */
-table.notice-tbl{
+section#notice-section table.notice-tbl{
 	border-spacing: 0; 
 	text-align: center; 
 	margin: auto; 
@@ -269,13 +269,13 @@ table.notice-tbl{
 	border-bottom: 1px solid lightgrey;
 }
 	
-table.notice-tbl tr.title th{	
+section#notice-section table.notice-tbl tr.title th{	
 	line-height: 250%; 
 	text-align: center;
 	border-top: 1px solid lightgrey;
 }
 
-input[type="button"].write-btn{
+section#notice-section input[type="button"].write-btn{
 	width: 50px; 
 	height: 25px; 
 	border: 1px solid gainsboro; 
@@ -284,82 +284,82 @@ input[type="button"].write-btn{
 	border-radius: 10%;
 }
 	
-table.notice-tbl tr.title th,td{
+section#notice-section table.notice-tbl tr.title th,td{
 	border-bottom: 1px solid lightgrey;
 }
 
-table.notice-tbl tbody tr:hover{
+section#notice-section table.notice-tbl tbody tr:hover{
 	background-color: whitesmoke;
 }
 
-div#search-container{margin-top: 5px; width: 100%; height: 35px; text-align: center;}
-div#search-container>input[type="button"]{
+section#notice-section div#search-container{margin-top: 5px; width: 100%; height: 35px; text-align: center;}
+section#notice-section div#search-container>input[type="button"]{
     width: 50px; height: 25px; 
     border: 1px solid gainsboro; 
     background-color: white;
     border-radius: 10%;
 }
-#search-category{height: 25px; border: 1px solid gainsboro;}
-div#search-container input[type="search"]{
+section#notice-section div#search-container search#search-category{height: 25px; border: 1px solid gainsboro;}
+section#notice-section div#search-container input[type="search"]{
     border: 0.05em solid gainsboro;
     width: 250px; height: 25px;
     border-radius: 0.3em;
 }
 
-div#paging-container{text-align: center;}
+section#notice-section div#paging-container{text-align: center;}
 
 
 
 /* 글쓰기*/
-.write-tbl{
+section#noticeWrite-section table.write-tbl{
 	width: 70%; height: 400px;
 	margin-top: 20px;
 	border-spacing: 0;	
 }
-.write-tbl>th, td{
+section#noticeWrite-section table.write-tbl>th, td{
 	border: none;
 }
-.write-tbl th{
+section#noticeWrite-section table.write-tbl th{
 	width: 20%;
 }        
-input[type="text"]{
+section#noticeWrite-section table input[type="text"]{
 	width: 90%; height: 30px;
     border: 0.08em solid lightgray;
     border-radius: 0.5em;
     margin-left: auto;
 }
-textarea{
+section#noticeWrite-section table textarea{
     width: 90%; height: 200px;
     border: 0.08em solid lightgray;
     border-radius: 0.5em;}
     
-div#btn-container{
+section#noticeWrite-section div#btn-container{
 	width: 100%; 
 	height: 30px; 
 	text-align: center;
 	margin-top: 20px;
 }
-div#btn-container>input[type="button"]{
+section#noticeWrite-section div#btn-container>input[type="button"]{
     width: 50px; height: 30px; 
     border: 1px solid gainsboro; 
     background-color: white;
     border-radius: 10%;
 }
 
-table.noticeView-tbl{	
+section#noticeView-section table.noticeView-tbl{	
 	width: 80%; height: 450px;
 	border-spacing: 0;
 	border-collapse: collapse;
 	margin-top: 10px;
 }
-table.noticeView-tbl td{
+section#noticeView-section table.noticeView-tbl td{
 	border-top: 1px solid lightgrey;	
 	border-bottom: 1px solid lightgrey;	
 }
-td#btn-td{
+section#noticeView-section td#btn-td{
 	border: none;
 }       
-td#btn-td input[type="button"]{            
+section#noticeView-section td#btn-td input[type="button"]{            
 	border: 1px solid gainsboro;
     background-color: white;
     width: 50px; height: 30px;
@@ -368,11 +368,11 @@ td#btn-td input[type="button"]{
     float: right;
     border-radius: 10%;                  
 }
-td#btn-td input[type="button"]:hover{
+section#noticeView-section td#btn-td input[type="button"]:hover{
     background-color: whitesmoke;
 }
 
-td#writer-td, td#date-td{
+section#noticeView-section td#writer-td, td#date-td{
 	font-size: 13px;
 	color: grey;
 }

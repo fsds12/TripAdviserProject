@@ -4,7 +4,7 @@
 <%@ include file="/views/common/header.jsp" %>
 <%@ include file="/views/notice/nav.jsp" %>
 
-<section id="notice-section">	
+<section id="noticeWrite-section">	
 	<div class="caption">글수정</div>
     <table align="center" class="write-tbl">    	
          	<tr>

@@ -4,7 +4,7 @@
 <%@ include file="/views/common/header.jsp" %>
 <%@ include file="/views/notice/nav.jsp" %>
 
-<section id="notice-section">
+<section id="noticeView-section">
 	<div class="caption">Q&A</div>        
 	<table class="noticeView-tbl" align="center">
 		<tr height="60px">
