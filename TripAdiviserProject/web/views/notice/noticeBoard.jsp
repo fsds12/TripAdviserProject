@@ -109,8 +109,7 @@
                 <li><a>4</a></li>
                 <li><a>5</a></li>
                 <li><a>>></a></li>
-            </ul>
-        </div>      
-   
+            </ul>             
+   		</div>
 </section>
 <%@ include file="/views/common/footer.jsp" %>
