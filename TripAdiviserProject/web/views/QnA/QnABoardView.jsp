@@ -10,10 +10,11 @@ section#noticeView-section div#noticeView-section{
 }
 section#noticeView-section div#comment-container{
 	/* border: 1px solid lightgreen; */
-	width:89.5%; height: 400px;	
+	width:80%; height: 300px;	
 	float: right;
 	text-align: center; 
 	display: none;
+	/* background-color: gainsboro; */
 }
 section#noticeView-section div#comment-container textarea{
 	margin-top: 10px;
@@ -65,7 +66,7 @@ section#noticeView-section div#comment-container div#comment-box{
 			</td>
 		</tr>
 	</table>
-	<div id="comment-container">
+	<div id="comment-container">		
 		<textarea></textarea>
 		<input type="button" value="등록" onclick="fn_comment()"/>
 		<div id="comment-box"></div>

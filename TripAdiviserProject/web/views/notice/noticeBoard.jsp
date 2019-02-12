@@ -4,7 +4,7 @@
    
  <section id="notice-section">    
     	<div class="caption">
-			<img src="<%=request.getContextPath()%>/views/images/notice.png"/>
+			<img src="<%=request.getContextPath()%>/images/notice.png" width="800px"/>
 		</div>    	  	
         <table align="center" class="notice-tbl">                    
             <thead>
