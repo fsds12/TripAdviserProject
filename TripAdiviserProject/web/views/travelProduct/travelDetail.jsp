@@ -172,17 +172,6 @@
 				<div class="comment-content">
 					<p>★</p>
 					<p>	테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트</p>
-					<table hidden>
-						<tr>
-							<td rowspan="2">
-								<textarea name="comment" class="form-control" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
-							</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td><input type="submit" class="btn btn-light" value="코멘트수정" /></td>
-						</tr>
-					</table>
 				</div>
 				<div class="comment-btn-container">
 					<p>&nbsp;</p>
