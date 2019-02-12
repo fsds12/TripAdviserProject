@@ -23,7 +23,7 @@ section#myComment-container {
 			<tbody>
 			<%for(int i=0; i<4; i++) {%>
 				<tr>
-					<td>한강공원</td>
+					<td>테스트공원ㅁ</td>
 					<td>2019.02.11</td>
 					<td>★★★★★</td>
 					<td>테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트</td>
