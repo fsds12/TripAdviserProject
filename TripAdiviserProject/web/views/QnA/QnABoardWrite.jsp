@@ -56,7 +56,7 @@
 	
 	$(function(){
 		var text=document.getElementById('content');
-		text.value+="관리와 글쓴사람만 볼 수 있음";
+		text.value+="관리자와 글쓴사람만 볼 수 있음";
 		
 	})
 </script> 

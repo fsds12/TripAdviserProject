@@ -14,6 +14,7 @@ section#noticeView-section div#comment-container{
 	display: inline-block;
 	float: right;
 	text-align: center;
+	display: none;
 }
 section#noticeView-section div#comment-container textarea{
 	margin-top: 10px;
@@ -27,8 +28,11 @@ section#noticeView-section div#comment-container input[type="button"]{
 	border: 1px solid gainsboro; 
 	background-color: white;	
 	border-radius: 10%;
-	cursor: pointer;
-	
+	cursor: pointer;	
+}
+section#noticeView-section div#comment-container div#comment-box{
+	border: 1px solid lightblue;
+	width: 80%;
 }
 </style>
 <section id="noticeView-section">
@@ -57,14 +61,14 @@ section#noticeView-section div#comment-container input[type="button"]{
 				<input type="button" value="삭제" onclick="fn_delete()"/>
 				<input type="button" value="수정" onclick="fn_update()"/>
 				<input type="button" value="목록" onclick="fn_return()"/>
-				<input type="button" value="답글" onclick="fn_comment()" id="comment-btn"/>         	
+				<input type="button" value="답글" id="comment-btn"/>         	
 			</td>
 		</tr>
 	</table>
 	<div id="comment-container">
 		<textarea></textarea>
-		<input type="button" value="등록"/>
-		<div></div>
+		<input type="button" value="등록" onclick="fn_comment()"/>
+		<div id="comment-box"></div>
 	</div>
 	
 </div>	  
@@ -82,7 +86,7 @@ section#noticeView-section div#comment-container input[type="button"]{
 		location.href="<%=request.getContextPath()%>/QnA/deleteQnA";
 	}
 	function fn_comment(){
-		alert("등록하시겠습니까?");
+		alert("등록하시겠습니까?")
 	}
 	$(function(){
 	    $('#comment-btn').click(function(){	    	
