@@ -83,57 +83,124 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <style>
-	#travel-comment-container .comment-container:nth-child() {
-	
+/* section#travel-detail-container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
 }
+section#travel-detail-container article{
+    width:880px;
+    margin: auto;
+}
+section#travel-detail-container article#travel-product-container > div {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px;
+}
+section#travel-detail-container > hr {
+    width:90%; text-align: center; margin-top: 20px; margin-bottom: 20px;
+
+}
+article#travel-product-container div#travel-intro-container {
+    margin-left: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    display: inline-block;
+    width: 415px;
+    height: 510px;
+    position: absolute;
+}
+article#travel-product-container div#travel-intro-container div{
+	padding-top: 5px;
+}
+article#travel-product-container div#travel-intro-container #travel-title{
+	padding: 0;
+	border-bottom: 0.5px solid;
+	border-bottom-color: silver;
+}
+article#travel-product-container div#travel-intro-container #travel-title h1 {
+	display:inline-block;
+    font-weight: bold;
+}
+article#travel-product-container div#travel-intro-container #travel-evul{
+	border-bottom: 0.5px solid;
+	border-bottom-color: silver;
+}
+article#travel-product-container div#travel-intro-container #travel-date{
+	padding-top: 20px;
+}
+article#travel-product-container div#travel-intro-container #travel-address{
+}
+article#travel-product-container div#travel-intro-container #travel-price{
+}
+article#travel-product-container div#travel-intro-container #travel-review{
+	height: 200px;
+} 
+article#travel-product-container div#travel-intro-container #travel-btn{
+}
+article#travel-product-container div#travel-intro-container #travel-btn div {
+	display: inline-block;
+	width: 78%;
+	text-align: right;
+}
+
+article#travel-product-container div#travel-album {
+    display: inline-block;
+    width: 440px;
+    margin-bottom: 8px;
+    height: 268px;
+    text-align: center;
+}
+article#travel-product-container div#travel-album img {
+}
+
+article#travel-product-container div#google-map {
+    width: 440px;
+    height: 234px;
+    background-image: url("../images/testMap.png");
+} */
+	
 </style>
-<section id='travel-detail-container'>
-    <article id='travel-product-container'>
-        <div id='travel-album'>
-            <img id="represent" src="<%=request.getContextPath() %>/images/test.png" width="440px" height="268px" style="margin-bottom: 8px;" />
-        </div>
-        <div id='travel-intro-container'>
-        	<div id='travel-title'>
-        		<h1>여행제목</h1><div style="display: inline-block; margin-left: 120px;"><sub>조회수: 22532</sub></div>
-        	</div>
-        	<div id='travel-evul'>
-        		<h5>★ <span>4.3</span>평점</h5>
-        	</div>
-        	<div id='travel-date'>
-        		<p>06.23 ~ 09.01</p>
-        	</div>
-        	<div id='travel-address'>
-        		<p>ㅇㅇㅇ도 ㅇㅇ시 ㅇㅇ동 888-22</p>
-        	</div>
-        	<div id='travel-price'>
-        		<p><span hidden="hidden">가격: 000000원(숙박카테고리만)</span>&nbsp;</p>
-        	</div>
-        	<div id='travel-review'>
-        		<p>리뷰글영역</p>
-        	</div>
-        	<div id='travel-btn'>
-        		<button onclick="fn_scrap()" class="btn btn-primary">스크랩</button>
-        		<%if(id.equals("admin") || id.equals("trvWriter")) {//여행상품작성자 본인으로 로그인해있거나 관리자로 로그인했을시 버튼생성%>
-        		<div>
-        			<button onclick="fn_modify()" class="btn btn-light">상품수정</button>
-        			<button onclick="fn_delete()" class="btn btn-light">상품삭제</button>
-        		</div>
-        		<%} %>
-        	</div>
-        </div>
-        <div id="google-map">
-            google-map-container
-        </div>
+<section id='travel-detail-container' style="padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid lightgray; border-bottom-style: double;">
+    <article id="travel-description-container" style="width: 92%; margin: auto;">
+    	<div id="travel-title-container" style="display: block;">
+    	<h2 id="travel-title" style="font-weight: bold;">여행지 제목</h2>
+    	</div>
+    	<div id="travel-intro-container" style="display: block;">
+    		<div id="" style="display: flex;">
+    			<div id="travel-address-container" style="display: inline-block; width:70%;">
+    				<span class="glyphicon glyphicon-map-marker">&#xe062;</span><span>ㅇㅇㅇ시 ㅇㅇㅇㅇ ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
+    			</div>
+    			<div id="travel-manage-btn-container" style="display: inline-block; text-align: right; width:30%;">
+    				<button class="btn btn-dark" style="width: ;">수정하기</button> <button class="btn btn-dark" style="width: ;">삭제</button>
+    			</div>
+    		</div>
+    		<div id="" style="display: flex; border:0.5px solid lightgray;">
+    			<div id="" style="display: inline-block; width: 70%; height:380px;">
+    				<img src="<%=request.getContextPath() %>/images/test.png" width="100%" height="100%" />
+    			</div>
+    			<div id="" style="display: flex; flex-direction: column; width: 30%;">
+    				<div id="" style="display: inline-block; width: 100%; height: 50%;">
+    					<i class="fas fa-star">★</i>
+    				</div>
+    				<div id="google-map" style="display: inline-block; width: 100%; height: 40%;">
+    					google map
+    				</div>
+    				<div id="" style="display: inline-block; width: 100%; ">
+    					<button class="btn btn-primary" style="width: 100%;">스크랩하기</button>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div id="travel-content-container" style="display: block; margin-top: 20px; padding-top: 10px; border:0.5px solid lightgray;">
+    		본문(여행상품세부묘사)
+        <br><br><br><br><br><br><br><br>
+    	</div>
     </article>
-    <hr />
-    
-    <!-- <article id='travel-description'>
-        본문(여행상품세부묘사)
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </article>
-     -->
-    
-    <article id='travel-comment-container'>
+</section> 
+
+<section style="padding-top: 20px; padding-bottom: 20px;">
+    <article id='travel-comment-container' style="display: block; max-width: 880px; margin: auto; background-color: white">
     	<form action="<%=request.getContextPath() %>/travel/inputComment" method="post" class="form-inline" onsubmit="return fn_comment_confirm()">
 			평점 :&nbsp;<input type="radio" name="evaluation" id="star1" value="1" />
 			<label for="star1">★</label>&nbsp;
@@ -160,7 +227,7 @@
 		<hr />
 		<!-- 세션아이디랑 코멘트작성자와 비교해서 맞거나 admin계정이면 hidden삭제 아니면 hidden속성추가해서 넣기  -->
 		<%if(1>0) {	//이 여행상품에 코멘트가있을시 값들을 로드한다.%>
-		<%for(int i=0; i<4; i++) {%>
+		<%for(int i=0; i<5; i++) {%>
 			<div class="comment-container">
 				<div class='comment-profile'>
 					<img src="<%=request.getContextPath() %>/images/travel_detail_imgs/profile_default.gif" alt="" width="74px" height="84px" style="margin: 1px" />
@@ -171,7 +238,11 @@
 				</div>
 				<div class="comment-content">
 					<p>★</p>
-					<p>	테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트</p>
+					<%if(i != 4) {%>
+					<p>테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트테스트코멘트</p>
+					<%} else{ %>
+					<p>코멘트틀</p>
+					<%} %>
 				</div>
 				<div class="comment-btn-container">
 					<p>&nbsp;</p>
@@ -187,31 +258,6 @@
 				</div>
 			</div>
 		<%} %>
-		<div class="comment-container">
-			<div class='comment-profile'>
-				<img src="<%=request.getContextPath() %>/images/travel_detail_imgs/profile_default.gif" alt="" width="74px" height="84px" style="margin: 1px" />
-				<div class="comment-writer">admin</div>
-			</div>
-			<div class="comment-date">
-				<span><sub>2019.02.09</sub></span>
-			</div>
-			<div class="comment-content">
-				<p>★</p>
-				<p>코멘트 틀</p>
-			</div>
-			<div class="comment-btn-container">
-				<p>&nbsp;</p>
-				<%if(id.equals("admin") || id.equals("commentWriter")) {%>
-					<span class="comment-btn">
-						<button class='btn btn-primary' onclick="fn_comment_modify(5)">수정</button> <button class='btn btn-light' onclick="fn_comment_delete(5)">삭제</button>
-					</span>
-					<%} else{ %>
-					<span class="comment-btn">
-						&nbsp;
-					</span>
-				<%} %>
-			</div>
-		</div>
 		<nav id="pageBar">
 			<ul class="pagination justify-content-center">
 				<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
