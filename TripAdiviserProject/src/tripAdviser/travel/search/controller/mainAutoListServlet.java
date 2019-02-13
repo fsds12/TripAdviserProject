@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import tripAdviser.travel.search.model.dao.AjaxDao;
+import tripAdviser.travel.product.model.vo.TravelProduct;
+import tripAdviser.travel.search.model.service.AjaxService;
 
 /**
  * Servlet implementation class mainAutoListServlet
@@ -36,10 +37,10 @@ public class mainAutoListServlet extends HttpServlet {
 		String search=request.getParameter("search");
 		System.out.println("검색어:"+search);
 		String csv="";
-		List<String> isList;
+		List<TravelProduct> isList;
 		if(!search.trim().isEmpty())
 		{
-			isList=new AjaxDao().selectTitle(search);
+			isList=new AjaxService().selectTitle(search);
 		if(isList.size()>0)
 		{
 			for(int i=0;i<isList.size();i++)
