@@ -2,8 +2,8 @@
 	pageEncoding="UTF-8"%>
 
 <%@ include file="views/common/header.jsp"%>
-    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/vegas.min.css">
-    <script src="<%=request.getContextPath() %>/css/vegas.min.js"></script>
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/vegas.min.css">
+<script src="<%=request.getContextPath() %>/css/vegas.min.js"></script>
 <script>
 	$(function () {
 		$("#div-mainpage").vegas(
@@ -11,7 +11,7 @@
 				slides: [{
 					src: 'images/introPoster.png',
 					video: {
-						src: ['images/IntroVideo_long1.mp4','images/IntroVideo_long.webm',
+						src: ['images/IntroVideo_long1.mp4', 'images/IntroVideo_long.webm',
 							'images/IntroVideo_long.ogv'],
 						loop: true,
 						mute: true
@@ -51,18 +51,41 @@
 
 			.search-container {
 				text-align: center;
-				display:inline-block;
+				display: inline-block;
 			}
 		</style>
 		<div class="lg_text" id="title_font">떠나 볼까요?</div>
 		<div class="sm_text" id="title_font">Where do you want to go?</div>
 		<div class="search-container">
 			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-3" type="search" placeholder="예)서울" aria-label="Search">
-				<button class="btn btn-outline-light my-2 my-sm-0" type="submit"
-					style="margin: auto;">Search</button>
+				<input class="form-control mr-sm-3" id="searchName" type="search" placeholder="검색어입력" list="datalist"
+					aria-label="Search">
+				<datalist id="datalist">
+					<!-- 자동완성기능 부분 -->
+				</datalist>
+				<button class="btn btn-outline-light my-2 my-sm-0" type="submit" style="margin: auto;">검색</button>
 
 			</form>
+			<!-- 자동완성 스크립트 -->
+			<script>
+				$(function () {
+					$("#searchName").keyup(function () {
+						$.ajax({
+							url: "<%=request.getContextPath()%>/js.data.do",
+							type: "post",
+							data: { "search": $("#searchName").val() },
+							success: function (data) {
+								var html = "";
+								var list = data.split(",");
+								for (var i = 0; i < list < length; i++) {
+									html += '<option>' + list[i] + "</option>";
+								}
+								$("#datalist").html(html);
+							}
+						});
+					});
+				});
+			</script>
 		</div>
 	</div>
 	<div class="box-padding-big light-bg">
@@ -78,9 +101,11 @@
 						<p class="card-text">A dreamers paradise. Wake up to the cool
 							breeze of Indian ocean.</p>
 						<p class="card-text">
-							<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-								class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-								aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> 5 Stars
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i> 5 Stars
 						</p>
 					</div>
 				</div>
@@ -91,9 +116,11 @@
 						<p class="card-text">A dreamers paradise. Wake up to the cool
 							breeze of Indian ocean.</p>
 						<p class="card-text">
-							<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-								class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-								aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> 5 Stars
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i> 5 Stars
 						</p>
 					</div>
 				</div>
@@ -104,9 +131,11 @@
 						<p class="card-text">A dreamers paradise. Wake up to the cool
 							breeze of Indian ocean.</p>
 						<p class="card-text">
-							<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-								class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-								aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> 5 Stars
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i> 5 Stars
 						</p>
 					</div>
 				</div>
