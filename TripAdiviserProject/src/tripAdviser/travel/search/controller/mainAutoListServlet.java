@@ -37,7 +37,7 @@ public class mainAutoListServlet extends HttpServlet {
 		String search=request.getParameter("search");
 		System.out.println("검색어:"+search);
 		String csv="";
-		List<TravelProduct> isList;
+		List<String> isList;
 		if(!search.trim().isEmpty())
 		{
 			isList=new AjaxService().selectTitle(search);
@@ -50,7 +50,7 @@ public class mainAutoListServlet extends HttpServlet {
 			}
 		}
 	}
-System.out.println("csv"+csv);
+System.out.println("csv : "+csv);
 response.setContentType("text/csv;charset=UTF-8");
 response.getWriter().append(csv);		
 	}

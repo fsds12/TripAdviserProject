@@ -25,18 +25,17 @@ public class AjaxDao {
 		}
 	}
 
-	public List<TravelProduct> selectTitle(Connection conn, String search) {
+	public List<String> selectTitle(Connection conn, String search) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		List<TravelProduct> list = new ArrayList();
+		List<String> list = new ArrayList();
 		String sql = prop.getProperty("selectTitle");
 		try {
+			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, "%" + search + "%");
 			rs=pstmt.executeQuery();
 			while (rs.next()) {
-				TravelProduct pt=new TravelProduct();
-				pt.setTrvTitle(rs.getString("trv_title"));
-				list.add(pt);
+				list.add(rs.getString("trv_title"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -44,7 +43,6 @@ public class AjaxDao {
 			try {
 				rs.close();
 				pstmt.close();
-				conn.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

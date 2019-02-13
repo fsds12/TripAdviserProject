@@ -10,10 +10,10 @@ import tripAdviser.travel.search.model.dao.AjaxDao;
 
 public class AjaxService {
 
-	public List<TravelProduct> selectTitle(String search)
+	public List<String> selectTitle(String search)
 	{
 		Connection conn=getConnection();
-		List<TravelProduct> list= new AjaxDao().selectTitle(conn, search);
+		List<String> list= new AjaxDao().selectTitle(conn, search);
 		close(conn);
 		return list;
 	}

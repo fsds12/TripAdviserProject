@@ -77,8 +77,8 @@
 							success: function (data) {
 								var html = "";
 								var list = data.split(",");
-								for (var i = 0; i < list < length; i++) {
-									html += '<option>' + list[i] + "</option>";
+								for (var i = 0; i < list.length; i++) {
+									html += '<option>' + list[i] + '</option>';
 								}
 								$("#datalist").html(html);
 							}
