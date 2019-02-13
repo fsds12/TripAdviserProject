@@ -9,11 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TripAdvisor</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
-    <script src="<%=request.getContextPath() %>/js/jquery-3.3.1.min.js"></script>
-    <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.css">
     <%-- <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.min.css"> --%>
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
+
+    
+    <script src="<%=request.getContextPath() %>/js/jquery-3.3.1.min.js"></script>
+    <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
+
 </head>
 <style>
 	

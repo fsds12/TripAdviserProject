@@ -67,10 +67,7 @@
 
 			</div>
 			
-			<div id="btn">
-			<button id="btn-update" onclick="">수정</button>
-			<button id="btn-delete" onclick="">삭제</button>
-			</div>
+
 			
 			<nav aria-label="Page navigation example" style="text-align: center;">
 				<ul class="pagination">
