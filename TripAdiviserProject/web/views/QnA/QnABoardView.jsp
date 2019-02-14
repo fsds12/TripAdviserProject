@@ -6,7 +6,7 @@
 
 <div class="noticeView-container">
 	<div class="caption">
-    	<img src="<%=request.getContextPath()%>/images/board.png" width="800px"/>
+    	<img src="<%=request.getContextPath()%>/images/qnaBoard4.png" width="800px"/>
     </div>        
 	<table class="noticeView-tbl" align="center">
 		<tr height="60px">

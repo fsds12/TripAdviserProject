@@ -7,7 +7,7 @@
 
  <section id="notice-section" class="notice-section">    
     <div class="caption">
-    	<img src="<%=request.getContextPath()%>/images/board.png" width="800px"/>
+    	<img src="<%=request.getContextPath()%>/images/qnaBoard4.png" width="800px"/>
     </div>    	  	
     <table align="center" class="notice-tbl">                    
     	<thead>

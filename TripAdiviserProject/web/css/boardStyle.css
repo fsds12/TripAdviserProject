@@ -16,7 +16,7 @@ section.notice-section div.caption{
 }
 section.notice-section div.caption>img{
 		height: 150px;
-		border: 1px solid lightgrey;
+		border: 1px solid grey;
 }
 /* 공지사항 게시판 css */
 section#notice-section table.notice-tbl{

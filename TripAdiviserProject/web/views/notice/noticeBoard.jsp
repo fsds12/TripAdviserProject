@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*, tripAdviser.board.model.vo.NoticeBoard" %>
+<%
+	List<NoticeBoard> list=(List)request.getAttribute("list");
+%>
 <%@ include file="/views/common/header.jsp" %>
-<%-- <%@ include file="/views/notice/nav.jsp" %> --%>
+
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
  <section id="notice-section" class="notice-section">    
     	<div class="caption">
@@ -21,6 +25,7 @@
                 <th>조회수</th>
             </tr>
             </thead>
+            <%-- <%for(NoticeBoard n : list){ %> --%>
             <tbody>            
             <tr>
                 <td>1</td>
@@ -29,6 +34,7 @@
                 <td>19/01/22</td>
                 <td>1</td>
             </tr>
+            <%-- <%} %> --%>
             <tr>
                 <td>2</td>
                 <td>아무개</td>
