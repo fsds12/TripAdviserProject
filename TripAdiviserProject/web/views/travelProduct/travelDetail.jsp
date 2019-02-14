@@ -83,86 +83,16 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <style>
-/* section#travel-detail-container {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;
+section#travel-detail-container {
+padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid lightgray; border-bottom-style: double;
 }
-section#travel-detail-container article{
-    width:880px;
-    margin: auto;
+section#travel-detail-container article#travel-description-container {
+width: 92%; margin: auto;
 }
-section#travel-detail-container article#travel-product-container > div {
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px;
-}
-section#travel-detail-container > hr {
-    width:90%; text-align: center; margin-top: 20px; margin-bottom: 20px;
-
-}
-article#travel-product-container div#travel-intro-container {
-    margin-left: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 10px;
-    display: inline-block;
-    width: 415px;
-    height: 510px;
-    position: absolute;
-}
-article#travel-product-container div#travel-intro-container div{
-	padding-top: 5px;
-}
-article#travel-product-container div#travel-intro-container #travel-title{
-	padding: 0;
-	border-bottom: 0.5px solid;
-	border-bottom-color: silver;
-}
-article#travel-product-container div#travel-intro-container #travel-title h1 {
-	display:inline-block;
-    font-weight: bold;
-}
-article#travel-product-container div#travel-intro-container #travel-evul{
-	border-bottom: 0.5px solid;
-	border-bottom-color: silver;
-}
-article#travel-product-container div#travel-intro-container #travel-date{
-	padding-top: 20px;
-}
-article#travel-product-container div#travel-intro-container #travel-address{
-}
-article#travel-product-container div#travel-intro-container #travel-price{
-}
-article#travel-product-container div#travel-intro-container #travel-review{
-	height: 200px;
-} 
-article#travel-product-container div#travel-intro-container #travel-btn{
-}
-article#travel-product-container div#travel-intro-container #travel-btn div {
-	display: inline-block;
-	width: 78%;
-	text-align: right;
-}
-
-article#travel-product-container div#travel-album {
-    display: inline-block;
-    width: 440px;
-    margin-bottom: 8px;
-    height: 268px;
-    text-align: center;
-}
-article#travel-product-container div#travel-album img {
-}
-
-article#travel-product-container div#google-map {
-    width: 440px;
-    height: 234px;
-    background-image: url("../images/testMap.png");
-} */
 	
 </style>
-<section id='travel-detail-container' style="padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid lightgray; border-bottom-style: double;">
-    <article id="travel-description-container" style="width: 92%; margin: auto;">
+<section id='travel-detail-container' style="">
+    <article id="travel-description-container" style=" ">
     	<div id="travel-title-container" style="display: block;">
     	<h2 id="travel-title" style="font-weight: bold;">여행지 제목</h2>
     	</div>
@@ -214,7 +144,7 @@ article#travel-product-container div#google-map {
 			<label for="star5">★★★★★</label>
 			<br>
 			<label class="sr-only" for="comment">Comment</label>
-			<div id='travel-comment-input-container' style="display: flex;">
+			<div id='travel-comment-input-container' style="display: flex; max-width:">
 				<div style="display:inline-block;">
 					<textarea name="comment" class="form-control" style="max-width: 657px; height: 100%; margin: 0;" cols="70" rows="2" maxlength="100" placeholder="코멘트입력"></textarea>
 				</div>
@@ -222,6 +152,9 @@ article#travel-product-container div#google-map {
 					<div style="display: block;">&nbsp;</div>
 					<div style="display:inline-block;"><input type="submit" class="btn btn-light" value="코멘트작성" /></div>
 				</div>
+				<!-- <div style="display: block; width: 100%;">
+					<span>로그인후 코멘트 작성이 가능합니다!</span>
+				</div> -->
 			</div>
 		</form>
 		<hr />
