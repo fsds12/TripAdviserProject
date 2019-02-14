@@ -5,47 +5,21 @@ import java.util.Date;
 public class TravelProduct {
 	private int trvNo;
 	private String trvTitle;
+	private String trvRepresentPic;
 	private String trvProvince;
 	private String trvCity;
 	private String trvAddress;
 	private Date trvDateStart;
 	private Date trvDateEnd;
 	private String trvReview;
-	private String trvCategory;
+	private String trvCategory; //소분류 코드 trv_small_ctg_code
 	private String trvGps;
-	private Date trvDate;
+	private Date trvDate; // 작성일자 trv_write_date
 	private String memberId;
 	private double aveStarRate;
-	
+	private int trvHits;
+		
 	public TravelProduct() {}
-	
-	@Override
-	public String toString() {
-		return "TravelProduct [trvNo=" + trvNo + ", trvTitle=" + trvTitle + ", trvProvince=" + trvProvince
-				+ ", trvCity=" + trvCity + ", trvAddress=" + trvAddress + ", trvDateStart=" + trvDateStart
-				+ ", trvDateEnd=" + trvDateEnd + ", trvReview=" + trvReview + ", trvCategory=" + trvCategory
-				+ ", trvGps=" + trvGps + ", trvDate=" + trvDate + ", memberId=" + memberId + ", aveStarRate="
-				+ aveStarRate + "]";
-	}
-
-	public TravelProduct(int trvNo, String trvTitle, String trvProvince, String trvCity, String trvAddress,
-			Date trvDateStart, Date trvDateEnd, String trvReview, String trvCategory, String trvGps, Date trvDate,
-			String memberId, double aveStarRate) {
-		super();
-		this.trvNo = trvNo;
-		this.trvTitle = trvTitle;
-		this.trvProvince = trvProvince;
-		this.trvCity = trvCity;
-		this.trvAddress = trvAddress;
-		this.trvDateStart = trvDateStart;
-		this.trvDateEnd = trvDateEnd;
-		this.trvReview = trvReview;
-		this.trvCategory = trvCategory;
-		this.trvGps = trvGps;
-		this.trvDate = trvDate;
-		this.memberId = memberId;
-		this.aveStarRate = aveStarRate;
-	}
 
 	public int getTrvNo() {
 		return trvNo;
@@ -61,6 +35,14 @@ public class TravelProduct {
 
 	public void setTrvTitle(String trvTitle) {
 		this.trvTitle = trvTitle;
+	}
+
+	public String getTrvRepresentPic() {
+		return trvRepresentPic;
+	}
+
+	public void setTrvRepresentPic(String trvRepresentPic) {
+		this.trvRepresentPic = trvRepresentPic;
 	}
 
 	public String getTrvProvince() {
@@ -150,6 +132,47 @@ public class TravelProduct {
 	public void setAveStarRate(double aveStarRate) {
 		this.aveStarRate = aveStarRate;
 	}
+
+	public int getTrvHits() {
+		return trvHits;
+	}
+
+	public void setTrvHits(int trvHits) {
+		this.trvHits = trvHits;
+	}
+
+	public TravelProduct(int trvNo, String trvTitle, String trvRepresentPic, String trvProvince, String trvCity,
+			String trvAddress, Date trvDateStart, Date trvDateEnd, String trvReview, String trvCategory, String trvGps,
+			Date trvDate, String memberId, double aveStarRate, int trvHits) {
+		super();
+		this.trvNo = trvNo;
+		this.trvTitle = trvTitle;
+		this.trvRepresentPic = trvRepresentPic;
+		this.trvProvince = trvProvince;
+		this.trvCity = trvCity;
+		this.trvAddress = trvAddress;
+		this.trvDateStart = trvDateStart;
+		this.trvDateEnd = trvDateEnd;
+		this.trvReview = trvReview;
+		this.trvCategory = trvCategory;
+		this.trvGps = trvGps;
+		this.trvDate = trvDate;
+		this.memberId = memberId;
+		this.aveStarRate = aveStarRate;
+		this.trvHits = trvHits;
+	}
+
+	@Override
+	public String toString() {
+		return "TravelProduct [trvNo=" + trvNo + ", trvTitle=" + trvTitle + ", trvRepresentPic=" + trvRepresentPic
+				+ ", trvProvince=" + trvProvince + ", trvCity=" + trvCity + ", trvAddress=" + trvAddress
+				+ ", trvDateStart=" + trvDateStart + ", trvDateEnd=" + trvDateEnd + ", trvReview=" + trvReview
+				+ ", trvCategory=" + trvCategory + ", trvGps=" + trvGps + ", trvDate=" + trvDate + ", memberId="
+				+ memberId + ", aveStarRate=" + aveStarRate + ", trvHits=" + trvHits + "]";
+	}
+	
+	
+	
 
 }
 
