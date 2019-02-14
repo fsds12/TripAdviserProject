@@ -432,7 +432,12 @@ section form div.container div#btn #btn-delete{
 	color: white;
 }
 
-
+section form div.inputImage img {
+    margin: 1em 0;
+    display: block;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(0,0,0);
+}
 
 
 
