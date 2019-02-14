@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ page import="tripAdviser.travel.product.model.vo.TravelProduct" %>
 <%@ include file="/views/common/header.jsp" %>
+
 <%
 	String id = "admin";	//세션에서 로그인한 사용자의 객체를 불러와서 초기화할예정 임시로 스트링객체선언
+	TravelProduct tp = (TravelProduct)request.getAttribute("travelProduct");
 %>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
@@ -49,10 +51,6 @@
     function fn_comment_modify(commentNo) {
         var selNo = commentNo + 1;
         console.log(selNo);
-        //$("#travel-comment-container .comment-container:nth-child(" + selNo + ") .comment-content p:nth-child(2)").attr("hidden = 'hidden'");
-        //$("#travel-comment-container .comment-container:nth-child(" + selNo + ") .comment-content table").removeAttr("hidden");
-        $("#travel-comment-container .comment-container .comment-content p").attr("hidden");
-        $("#travel-comment-container .comment-container:nth-child(4) .comment-content table").removeAttr("hidden");
     }
 
     function fn_comment_delete(commentNo) {
@@ -72,7 +70,7 @@
     	    mapTypeId:google.maps.MapTypeId.ROADMAP
     	  };
 
-    	  var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
+    	  var map=new google.maps.Map(document.getElementById("travel-map-div"),mapProp);
     	  
     	  var marker = new google.maps.Marker({
     		position: LatLng,
@@ -84,47 +82,53 @@
 </script>
 <style>
 section#travel-detail-container {
-padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid lightgray; border-bottom-style: double;
+	padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid lightgray; border-bottom-style: double;
 }
-section#travel-detail-container article#travel-description-container {
-width: 92%; margin: auto;
-}
-	
+article#travel-description-space {width: 92%; margin: auto;}
+article#travel-description-space div#travel-address-box {display: inline-block; width:70%;}
+article#travel-description-space div#travel-manage-btn-box {display: inline-block; text-align: right; width:30%;}
+article#travel-description-space div#travel-album-review-space {display: flex; border:0.5px solid lightgray;}
+article#travel-description-space div#travel-album-carausel-box {display: inline-block; width: 70%; height:380px;}
+article#travel-description-space div#travel-review-box {display: flex; flex-direction: column; width: 30%;}
+article#travel-description-space div#travel-evul-div {display: inline-block; width: 100%; height: 50%;}
+article#travel-description-space div#travel-map-div {display: inline-block; width: 100%; height: 40%;}
+article#travel-description-space div#travel-scrap-div {display: inline-block; width: 100%;}
+article#travel-description-space div#travel-content-container {display: block; margin-top: 20px; padding-top: 10px; border:0.5px solid lightgray;}
+
 </style>
-<section id='travel-detail-container' style="">
-    <article id="travel-description-container" style=" ">
+<section id='travel-detail-container'>
+    <article id="travel-description-space">
     	<div id="travel-title-container" style="display: block;">
-    	<h2 id="travel-title" style="font-weight: bold;">여행지 제목</h2>
+    		<h2 id="travel-title" style="font-weight: bold; margin-bottom: 1px;">여행지 제목</h2>
     	</div>
     	<div id="travel-intro-container" style="display: block;">
-    		<div id="" style="display: flex;">
-    			<div id="travel-address-container" style="display: inline-block; width:70%;">
+    		<div id="travel-address-btn-space" style="display: flex;">
+    			<div id="travel-address-box">
     				<span class="glyphicon glyphicon-map-marker">&#xe062;</span><span>ㅇㅇㅇ시 ㅇㅇㅇㅇ ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</span>
     			</div>
-    			<div id="travel-manage-btn-container" style="display: inline-block; text-align: right; width:30%;">
+    			<div id="travel-manage-btn-box" >
     				<button class="btn btn-dark" style="width: ;">수정하기</button> <button class="btn btn-dark" style="width: ;">삭제</button>
     			</div>
     		</div>
-    		<div id="" style="display: flex; border:0.5px solid lightgray;">
-    			<div id="" style="display: inline-block; width: 70%; height:380px;">
+    		<div id="travel-album-review-space">
+    			<div id="travel-album-carausel-box">
     				<img src="<%=request.getContextPath() %>/images/test.png" width="100%" height="100%" />
     			</div>
-    			<div id="" style="display: flex; flex-direction: column; width: 30%;">
-    				<div id="" style="display: inline-block; width: 100%; height: 50%;">
+    			<div id="travel-review-box">
+    				<div id="travel-evul-div">
     					<i class="fas fa-star">★</i>
     				</div>
-    				<div id="google-map" style="display: inline-block; width: 100%; height: 40%;">
+    				<div id="travel-map-div">
     					google map
     				</div>
-    				<div id="" style="display: inline-block; width: 100%; ">
+    				<div id="travel-scrap-div">
     					<button class="btn btn-primary" style="width: 100%;">스크랩하기</button>
     				</div>
     			</div>
     		</div>
     	</div>
-    	<div id="travel-content-container" style="display: block; margin-top: 20px; padding-top: 10px; border:0.5px solid lightgray;">
+    	<div id="travel-content-container" style="height: 250px;">
     		본문(여행상품세부묘사)
-        <br><br><br><br><br><br><br><br>
     	</div>
     </article>
 </section> 

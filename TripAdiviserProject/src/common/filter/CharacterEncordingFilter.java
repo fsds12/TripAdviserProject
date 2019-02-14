@@ -38,7 +38,6 @@ public class CharacterEncordingFilter implements Filter {
 		// place your code here
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		System.out.println("인코딩 필터 적용");
 
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
