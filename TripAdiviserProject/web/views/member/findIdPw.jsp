@@ -4,9 +4,10 @@
 <%@ include file="/views/common/header.jsp"%>
 
 <style>
-section#idpwsearch-container{
+    section#idpwsearch-container{
+    
 min-width: 100%;
-	margin:auto;
+margin:auto;
 }
 
 
@@ -19,7 +20,6 @@ section#idpwsearch-container article#allarti div#idsearch{
 width:400px;
 height:400px;
 display: inline-block;
-float: left;
 background-color:rgb(252,252,252);
 
 }
@@ -29,17 +29,17 @@ height:400px;
 display: inline-block;
 background-color:rgb(252,252,252);
 margin-left: 42px;
+
 }
 article#allarti div#idsearch #idreset{
-position: relative; right:49px;
+    
 }
 article#allarti div#pwsearch #pwreset{
-position: relative; right:49px;
+    
 }
 article#allarti div#idsearch #idreset,article#allarti div#pwsearch #pwreset,article#allarti div#idsearch #idfind,article#allarti div#pwsearch #pwfind{
 	outline: 0;
     padding: 5px 12px;
-    display: block;
     color: #9fa8b0;
     font-weight: bold;
     text-shadow: 1px 1px #1f272b;
@@ -141,71 +141,112 @@ background-position: 0 top;
     -webkit-box-shadow: 1px 1px 1px rgba(255,255,255,0.1); /* Safari, Chrome */
     box-shadow: 1px 1px 1px rgba(255,255,255,0.1); /* CSS3 */
 }
+section#idpwsearch-container article#allarti input[type="text"],section#idpwsearch-container article#allarti div#idsearch input[type=email],#address2{
+    border-radius: 2rem;
+    display: inline-block;
+}
+section#idpwsearch-container article#allarti label{
+    display: inline-block;
+    margin-left: 10px;
+}
+section#idpwsearch-container article#allarti input[type="reset"]{
 
+}
+section#idpwsearch-container article#allarti input[type="submit"]{
+
+}
+section#idpwsearch-container article#allarti div.controlslabel{
+    width: 73px;
+}
+#idsearch{
+    margin: auto;
+}
+section#idpwsearch-container article#allarti div.control-group{
+    padding-bottom: 10px;
+}
+section#idpwsearch-container article#allarti div.controlsbutton{
+    text-align:end;
+    margin-top: 180px;
+}
 
 
 </style>
 <section id="idpwsearch-container">
-	<article id="allarti">
+    <article id="allarti">
 
-		<div id="idsearch">
+        <div id="idsearch">
 
-			<form action="">
-				<table>
-					<tr>
-						<td><label id="namelabel" for="name">이름</label> <input
-							id="name" type="text" class="form-control" placeholder="이름" /></td>
-					</tr>
-					<tr>
-						<td><label id="phonelabel" for="phone">전화번호</label><input
-							id="phone" type="text" class="form-control" placeholder="전화번호" /></td>
-					</tr>
-					<tr>
-						<td><label id="addresslabel" for="address">이메일</label> <input
-							id="address" type="email" class="form-control"
-							placeholder="이메일주소" /></td>
-					</tr>
-					<tr>
-						<td><input id="idfind" type="submit"
-							value="아이디찾기" /></td>
-							<td><input id="idreset" type="reset"
-							value="취소" /></td>
-					</tr>
-					
-				</table>
+            <form action="">
+                <div id="enroll-title">
+                    <h5 class="card-title text-center">아이디 찾기</h5>
+                </div>
 
-			</form>
-		</div>
+                <div class="control-group">
+                    <div class="controlslabel" style="display:inline-block;"> <label id="namelabel" for="name">이름</label></div>
+                    <div class="controls" name="controls" style="display:inline-block;">
+                        <input id="name" type="text" class="form-control" placeholder="이름" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controlslabel" style="display:inline-block;"> <label id="phonelabel" for="phone">전화번호</label></div>
 
-		<div id="pwsearch">
-			<form>
-				<table>
+                    <div class="controls" name="controls" style="display:inline-block;"><input id="phone" type="text"
+                            class="form-control" placeholder="전화번호" />
+                    </div>
+                </div>
 
-					<tr>
-						<td><label id="idlabel" for="id">아이디</label> <input
-							type="text" id="id" class="form-control" placeholder="아이디" /></td>
-					</tr>
-					<tr>
-						<td><label id="phone2label" for="phone2">전화번호</label> <input
-							type="text" id="phone2" class="form-control" placeholder="전화번호" /></td>
-					</tr>
-					<tr>
-						<td><label id="address2label" for="address2">이메일</label> <input
-							type="email" id="address2" class="form-control"
-							placeholder="이메일주소" /></td>
-					</tr>
-					<tr>
-						<td><input id="pwfind" type="submit"
-							value="비밀번호찾기" /></td>
-							<td><input id="pwreset" type="reset"
-							value="취소" /></td>
-					</tr>
-					
-				</table>
-			</form>
-		</div>
+                <div class="control-group">
+                    <div class="controlslabel" style="display:inline-block;"> <label id="addresslabel" for="address">이메일</label></div>
+                    <div class="controls" name="controls" style="display:inline-block;"> <input id="address" type="email"
+                            class="form-control" placeholder="이메일주소" />
+                    </div>
+                </div>
+                <div class="controlsbutton">
+                    <input id="idfind" type="submit" value="아이디찾기" class="btn btn-success" />
+                    <input id="idreset" type="reset" value="취소" class="btn btn-success" />
+                </div>
 
 
-	</article>
+            </form>
+        </div>
+
+        <div id="pwsearch">
+            <form>
+                <div id="enroll-title">
+                    <h5 class="card-title text-center">비밀번호 찾기</h5>
+                </div>
+
+                <div class="control-group">
+                    <div class="controlslabel" style="display:inline-block;"><label id="idlabel" for="id">아이디</label>
+                    </div>
+                    <div class="controls" name="controls" style="display:inline-block;"><input type="text" id="id"
+                            class="form-control" placeholder="아이디" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controlslabel" style="display:inline-block;"><label id="phone2label" for="phone2">전화번호</label></div>
+                    <div class="controls" name="controls" style="display:inline-block;"> <input type="text" id="phone2"
+                            class="form-control" placeholder="전화번호" /></div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controlslabel" style="display:inline-block;"><label id="address2label" for="address2">이메일</label>
+                    </div>
+                    <div class="controls" name="controls" style="display:inline-block;"><input id="address2" type="email"
+                            class="form-control" placeholder="이메일주소" /></div>
+                </div>
+                <div class="controlsbutton">
+
+                    <input id="pwfind" type="submit" value="비밀번호찾기" class="btn btn-success" />
+                    <input id="pwreset" type="reset" value="취소" class="btn btn-success" />
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </article>
 </section>
 <%@ include file="/views/common/footer.jsp"%>
