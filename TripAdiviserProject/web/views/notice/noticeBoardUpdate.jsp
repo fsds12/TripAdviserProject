@@ -47,9 +47,10 @@
 <script>
 	function fn_submit(){
 		alert("등록하시겠습니까?");
+		
 	}
 	function fn_cancle(){
-		location.href="<%=request.getContextPath()%>/views/notice/noticeBorad.jsp";
+		location.href="<%=request.getContextPath()%>/notice/noticeList";
 	}
 </script>
 

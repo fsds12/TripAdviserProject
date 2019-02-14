@@ -40,7 +40,7 @@
 </section>
 <script>
 	function fn_return(){
-		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
+		location.href="<%=request.getContextPath()%>/notice/noticeList";
 	}	
 	function fn_update(){
 		alert("수정하시겠습니까?");

@@ -103,15 +103,15 @@
             <input type="button" value="검색" id="search-btn"/>           	               
         </div>        
          <div id="paging-container"> 
-            <ul class="pagination">
-                <li><a href="#"><<</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">>></a></li>
-            </ul>             
+            <ul class="pagination pagination-sm justify-content-center">
+    			<li class="page-item"><a class="page-link" href="#"><<</a></li>
+    			<li class="page-item"><a class="page-link" href="#">1</a></li>
+    			<li class="page-item"><a class="page-link" href="#">2</a></li>
+    			<li class="page-item"><a class="page-link" href="#">3</a></li>
+    			<li class="page-item"><a class="page-link" href="#">4</a></li>
+    			<li class="page-item"><a class="page-link" href="#">5</a></li>
+    			<li class="page-item"><a class="page-link" href="#">>></a></li>
+  			</ul>             
    		</div>
 </section>
 <%@ include file="/views/common/footer.jsp" %>

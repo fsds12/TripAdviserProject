@@ -81,7 +81,7 @@
             <input type="button" value="검색" id="search-btn"/>           	               
         </div>        
          <div id="paging-container"> 
-            <ul class="pagination pagination-sm">
+            <ul class="pagination pagination-sm justify-content-center">
     			<li class="page-item"><a class="page-link" href="#"><<</a></li>
     			<li class="page-item"><a class="page-link" href="#">1</a></li>
     			<li class="page-item"><a class="page-link" href="#">2</a></li>

@@ -50,7 +50,7 @@
 	}
 	function fn_cancle(){
 		alert("취소?");
-		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
+		location.href="<%=request.getContextPath()%>/notice/noticeList";
 	}
 </script>    
 
