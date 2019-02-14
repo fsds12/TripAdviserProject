@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%-- <%@ link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet" %> --%>
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
 <%@ include file="/views/common/header.jsp" %>     
-<%@ include file="/views/notice/nav.jsp" %>  
+<%-- <%@ include file="/views/notice/nav.jsp" %> --%>  
     
 
-<section id="noticeWrite-section">	
+<section id="noticeWrite-section" class="notice-section">	
 	<div class="caption">글쓰기</div>
     <table align="center" class="write-tbl">    	
          	<tr>

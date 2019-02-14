@@ -2,12 +2,24 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
-<%@ include file="/views/notice/nav.jsp" %>
-   
- <section id="notice-section">    
-    	<div class="caption">Q&A</div>    	  	
-        <table align="center" class="notice-tbl">                    
-            <thead>
+<%-- <%@ include file="/views/notice/nav.jsp" %> --%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
+<style>
+	div.caption>img{
+		height: 150px;
+		border: 1px solid lightgrey;
+	}
+</style>
+ <section id="notice-section" class="notice-section">    
+    <div class="caption">
+    	<img src="<%=request.getContextPath()%>/images/board.png" width="800px"/>
+    </div>    	  	
+    <table align="center" class="notice-tbl">                    
+    	<thead>
             <tr>
             	<td colspan="5">
             		<input type="button" value="쓰기" class="write-btn" onclick="location.href='<%=request.getContextPath()%>/QnA/QnAWrite'"/>
@@ -20,8 +32,8 @@
                 <th>작성일</th>
                 <th>조회수</th>
             </tr>
-            </thead>
-            <tbody>            
+        </thead>
+        <tbody>            
             <tr>
                 <td>10</td>
                 <td>user01</td>
@@ -56,44 +68,9 @@
                 <td>공지사항</td>
                 <td>19/01/26</td>
                 <td>1</td>
-            </tr>
-            <!-- <tr>
-                <td>6</td>
-                <td>관리자</td>
-                <td>공지사항</td>
-                <td>19/01/26</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>관리자</td>
-                <td>공지사항</td>
-                <td>19/01/26</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>관리자</td>
-                <td>공지사항</td>
-                <td>19/01/26</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>관리자</td>
-                <td>공지사항</td>
-                <td>19/01/26</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>관리자</td>
-                <td>공지사항</td>
-                <td>19/01/26</td>
-                <td>1</td>
-            </tr> -->
-            </tbody>                   
-        </table>
+            </tr>            
+    	</tbody>                   
+	</table>
         <div id="search-container">
             <select id="search-category">
                 <option value="제목">제목</option>
@@ -104,15 +81,15 @@
             <input type="button" value="검색" id="search-btn"/>           	               
         </div>        
          <div id="paging-container"> 
-            <ul class="pagination">
-                <li><a href="#"><<</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">>></a></li>
-            </ul>             
+            <ul class="pagination pagination-sm">
+    			<li class="page-item"><a class="page-link" href="#"><<</a></li>
+    			<li class="page-item"><a class="page-link" href="#">1</a></li>
+    			<li class="page-item"><a class="page-link" href="#">2</a></li>
+    			<li class="page-item"><a class="page-link" href="#">3</a></li>
+    			<li class="page-item"><a class="page-link" href="#">4</a></li>
+    			<li class="page-item"><a class="page-link" href="#">5</a></li>
+    			<li class="page-item"><a class="page-link" href="#">>></a></li>
+  			</ul>            
    		</div>
 </section>
 <%@ include file="/views/common/footer.jsp" %>

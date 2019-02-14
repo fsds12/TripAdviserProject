@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
 <%@ include file="/views/common/header.jsp" %>
-<%@ include file="/views/notice/nav.jsp" %>
+<%-- <%@ include file="/views/notice/nav.jsp" %> --%>
 
-<section id="noticeWrite-section">	
+<section id="noticeWrite-section" class="notice-section">	
 	<div class="caption">글수정</div>
     <table align="center" class="write-tbl">    	
          	<tr>
@@ -25,15 +25,15 @@
                 </td>
             </tr>
             <tr>
-                <th>파일업로드</th>
+                <th>파일첨부</th>
                 <td>
-                 	<input type="file" name="fileUpload"/>
+                 	<input type="file" name="up_file"/>
                 </td>
             </tr>
             <tr>
-                <th>파일업로드2</th>
+                <th>파일첨부</th>
                 <td>
-                 	<input type="file" name="fileUpload"/>
+                 	<input type="file" name="up_file"/>
                 </td>
             </tr>         
         </table>  

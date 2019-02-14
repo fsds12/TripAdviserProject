@@ -6,6 +6,9 @@
 <script src="<%=request.getContextPath()%>/js/jquery-3.3.1.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/jquery-ui.min.css">
+<script src="<%=request.getContextPath() %>/js/jquery-ui.min.js"></script>
+<script src="<%=request.getContextPath() %>/js/scripts.js"></script>
 <script src="css/vegas.min.js"></script>
 <script>
 	$(function () {

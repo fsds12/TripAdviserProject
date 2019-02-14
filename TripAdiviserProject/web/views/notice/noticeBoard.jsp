@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/views/common/header.jsp" %>
-<%@ include file="/views/notice/nav.jsp" %>
-   
- <section id="notice-section">    
+<%-- <%@ include file="/views/notice/nav.jsp" %> --%>
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
+ <section id="notice-section" class="notice-section">    
     	<div class="caption">
 			<img src="<%=request.getContextPath()%>/images/notice.png" width="800px"/>
 		</div>    	  	

@@ -231,12 +231,20 @@ footer#footer-container {
 	background-color: darkgrey;
 }
 
-/* 임지안 */
-body{margin: 0;}
+ /* 임지안 */
+/* body{margin: 0;}
 section#notice-section{
-	height: 630px; 
-	width: 89.5%; 
-	float: right; }
+	height: 640px; 
+	width: 100%;	
+}
+section#notice-section div.caption{	
+	text-align: center; 
+	font-weight: bold; 
+	color: slategrey;
+	margin-left: auto;
+	margin-top: 15px;
+	font-size: 25px;
+}
 nav#notice-menu{height: 630px; width: 10%; float:left;}
 div#menu-container>ul{list-style-type: none; width: 100%;}
 div#menu-container button{
@@ -250,17 +258,7 @@ div#menu-container button{
 	margin-left: 30px;
 }
 
-div.caption{	
-	text-align: center; 
-	font-weight: bold; 
-	color: slategrey;
-	margin-left: auto;
-	margin-top: 15px;
-	font-size: 25px;
-}
-
-
-/* 공지사항 게시판 css */
+ 공지사항 게시판 css
 section#notice-section table.notice-tbl{
 	border-spacing: 0; 
 	text-align: center; 
@@ -327,7 +325,7 @@ section#notice-section div#paging-container{text-align: center;}
 
 
 
-/* 글쓰기*/
+글쓰기
 section#noticeWrite-section table.write-tbl{
 	width: 70%; height: 400px;
 	margin-top: 20px;
@@ -401,7 +399,7 @@ section#noticeView-section td#writer-td, td#date-td{
 
 section#noticeView-section input[type="button"]#comment-btn{
 	
-}
+}  */
 
 /* 이정복 */
 .panel-block {
