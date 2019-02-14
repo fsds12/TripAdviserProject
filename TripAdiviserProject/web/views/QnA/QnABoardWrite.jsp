@@ -47,11 +47,11 @@
 <script>
 	function fn_submit(){
 		alert("등록하시겠습니까?");
-		location.href="<%=request.getContextPath()%>/notice/insertNotice";
+		location.href="<%=request.getContextPath()%>/QnA/insertQnA";
 	}
 	function fn_cancle(){
 		alert("취소하시겠습니까?");
-		location.href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp";
+		location.href="<%=request.getContextPath()%>/QnA/QnAList";
 	}
 	
 	$(function(){

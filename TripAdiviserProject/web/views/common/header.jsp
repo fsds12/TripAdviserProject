@@ -11,7 +11,7 @@
     <script src="<%=request.getContextPath() %>/js/jquery-3.3.1.min.js"></script>
     <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.css">
-    <%-- <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.min.css"> --%>
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
 <style>
@@ -81,8 +81,8 @@
                                 읽을거리
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<%=request.getContextPath()%>/views/notice/noticeBoard.jsp">공지사항</a>
-                                <a class="dropdown-item" href="<%=request.getContextPath()%>/views/QnA/QnABoard.jsp">Q/A</a>
+                                <a class="dropdown-item" href="<%=request.getContextPath()%>/notice/noticeList">공지사항</a>
+                                <a class="dropdown-item" href="<%=request.getContextPath()%>/QnA/QnAList">Q/A</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">사이트소개</a>
                             </div>

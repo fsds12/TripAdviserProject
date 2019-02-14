@@ -1,4 +1,4 @@
-package tripAdviser.board.notice.controller;
+package tripAdviser.board.QnA.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class NoticeListServlet
+ * Servlet implementation class QnAListServlet
  */
-@WebServlet("/notice/noticeList")
-public class NoticeListServlet extends HttpServlet {
+@WebServlet("/QnA/QnAList")
+public class QnAListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NoticeListServlet() {
+    public QnAListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class NoticeListServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/notice/noticeBoard.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/QnA/QnABoard.jsp").forward(request, response);
 	}
 
 	/**

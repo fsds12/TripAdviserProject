@@ -3,9 +3,10 @@
 <%@ include file="/views/common/header.jsp" %>
 <%-- <%@ include file="/views/notice/nav.jsp" %> --%>
 
-
 <section id="noticeView-section" class="notice-section">
-	<div class="caption">공지사항</div>        
+	<div class="caption">
+		<img src="<%=request.getContextPath()%>/images/notice.png" width="800px"/>
+	</div>        
 	<table class="noticeView-tbl" align="center">
 		<tr height="60px">
 			<td colspan="2" id="title-td">홈페이지 서비스 중단</td>

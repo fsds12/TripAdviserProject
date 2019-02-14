@@ -3,10 +3,10 @@
 /* 임지안 */
 body{margin: 0;}
 section.notice-section{
-	height: 640px; 
+	height: 650px; 
 	width: 100%;	
 }
-section#notice-section div.caption{	
+section.notice-section div.caption{	
 	text-align: center; 
 	font-weight: bold; 
 	color: slategrey;
@@ -14,7 +14,10 @@ section#notice-section div.caption{
 	margin-top: 15px;
 	font-size: 25px;
 }
-
+section.notice-section div.caption>img{
+		height: 150px;
+		border: 1px solid lightgrey;
+}
 /* 공지사항 게시판 css */
 section#notice-section table.notice-tbl{
 	border-spacing: 0; 
@@ -123,6 +126,8 @@ section#noticeWrite-section div#btn-container input[type="button"]:hover{
     background-color: whitesmoke;    
 }
 
+
+
 section#noticeView-section table.noticeView-tbl{	
 	width: 80%; height: 450px;
 	border-spacing: 0;
@@ -154,6 +159,35 @@ section#noticeView-section td#writer-td, td#date-td{
 	color: grey;
 }
 
-section#noticeView-section input[type="button"]#comment-btn{
+section#noticeView-section{
+	height: 1000px; 
+	width: 100%; 
+}
+section#noticeView-section div#comment-container{	
+	width:90%; height: 500px;	
+	text-align: center; 
+	display: none;
+	margin: auto;
+	background-color: gainsboro;
+}
+section#noticeView-section div#comment-container textarea{
+	margin-top: 10px;
+	margin-left: auto;
+	width: 80%; height: 100px;
+	border: 0.05em solid lightgrey;
+	border-radius: 0.5em;	
+}
+section#noticeView-section div#comment-container input[type="button"]{
+	width: 50px; height: 30px; 
+	border: 1px solid gainsboro; 
+	background-color: white;	
+	border-radius: 10%;
+	cursor: pointer;	
+}
+section#noticeView-section div#comment-container div#comment-box{
+	
+	width: 90%; height: 100px;	
+	text-align: center;
+	margin: auto;
 	
 }

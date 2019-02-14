@@ -1,19 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ include file="/views/common/header.jsp" %>
 <%-- <%@ include file="/views/notice/nav.jsp" %> --%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
-<style>
-	div.caption>img{
-		height: 150px;
-		border: 1px solid lightgrey;
-	}
-</style>
+
  <section id="notice-section" class="notice-section">    
     <div class="caption">
     	<img src="<%=request.getContextPath()%>/images/board.png" width="800px"/>

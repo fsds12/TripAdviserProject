@@ -1,44 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/boardStyle.css">
 <%@ include file="/views/common/header.jsp" %>
-<%-- <%@ include file="/views/notice/nav.jsp" %> --%>
-<style>
-section#noticeView-section div#noticeView-section{
-	height: 550px; 
-	width: 89.5%; 
-}
-section#noticeView-section div#comment-container{
-	/* border: 1px solid lightgreen; */
-	width:80%; height: 300px;	
-	float: right;
-	text-align: center; 
-	display: none;
-	/* background-color: gainsboro; */
-}
-section#noticeView-section div#comment-container textarea{
-	margin-top: 10px;
-	width: 80%; height: 100px;
-	border: 0.05em solid lightgrey;
-	border-radius: 0.5em;
-	
-}
-section#noticeView-section div#comment-container input[type="button"]{
-	width: 50px; height: 30px; 
-	border: 1px solid gainsboro; 
-	background-color: white;	
-	border-radius: 10%;
-	cursor: pointer;	
-}
-section#noticeView-section div#comment-container div#comment-box{
-	margin-top: 10px;
-	width: 80%; height: 100px;
-	
-}
-</style>
+
 <section id="noticeView-section" class="notice-section">
+
 <div class="noticeView-container">
-	<div class="caption">Q&A</div>        
+	<div class="caption">
+    	<img src="<%=request.getContextPath()%>/images/board.png" width="800px"/>
+    </div>        
 	<table class="noticeView-tbl" align="center">
 		<tr height="60px">
 			<td colspan="2" id="title-td">qnaTest</td>
@@ -67,16 +36,32 @@ section#noticeView-section div#comment-container div#comment-box{
 		</tr>
 	</table>
 	<div id="comment-container">		
+		
+		<div id="comment-box">
+			<table>
+				<tr>
+					<td>user01</td>
+					<td>19.02.12</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p>
+							답글 테스트
+						</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
 		<textarea></textarea>
 		<input type="button" value="등록" onclick="fn_comment()"/>
-		<div id="comment-box"></div>
-	</div>
-	
+	</div>	
 </div>	  
 </section>
+
 <script>
 	function fn_return(){
-		location.href="<%=request.getContextPath()%>/views/QnA/QnABoard.jsp";
+		location.href="<%=request.getContextPath()%>/QnA/QnAList";
 	}	
 	function fn_update(){
 		alert("수정하시겠습니까?");
@@ -91,8 +76,9 @@ section#noticeView-section div#comment-container div#comment-box{
 	}
 	$(function(){
 	    $('#comment-btn').click(function(){	    	
-	        $('#comment-container').toggle();
+	        $('#comment-container').toggle();	        	
 	    });
 	});
 </script>
+
 <%@ include file="/views/common/footer.jsp" %>
